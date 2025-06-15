@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import WaterBackground from "./components/WaterBackground";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Services from "./components/Services";
+import TrustFactors from "./components/TrustFactors";
+import Process from "./components/Process";
+import Testimonials from "./components/Testimonials";
+import ConsultationForm from "./components/ConsultationForm";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        {/* Interactive Water Background */}
+        <WaterBackground />
+
+        <Navbar />
+        <Hero />
+        <About />
+        <Services />
+        <TrustFactors />
+        <Process />
+        <Testimonials />
+        <ConsultationForm />
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 
