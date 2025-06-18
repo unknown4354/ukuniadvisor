@@ -79,35 +79,6 @@ const Process = () => {
           <div className="underline" />
         </div>
 
-        <div className="process-intro">
-          <p>
-            We support you every step of the way — from your first question to
-            your first day in the UK. Our expert guidance is available across
-            phone, WhatsApp, and now, video sessions!
-          </p>
-        </div>
-
-        <div className="availability-section">
-          <h3>🕒 Our Availability</h3>
-          <p>We're here to help, every day:</p>
-          <div className="availability-grid">
-            {availability.map((item, index) =>
-              <div key={index} className="availability-item">
-                <h4>
-                  {item.type}
-                </h4>
-                <p>
-                  {item.time}
-                </p>
-              </div>
-            )}
-          </div>
-          <p className="video-note">
-            Want personal face-to-face guidance? Book a video counselling
-            session with our expert at your preferred time.
-          </p>
-        </div>
-
         <div className="steps-section">
           <h3>🧭 Step-by-Step Process</h3>
           <div className="steps-timeline">

@@ -42,6 +42,21 @@ const TrustFactors = () => {
           <div className="underline" />
         </div>
 
+        <div className="trust-hero-image">
+          <img
+            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.1.0"
+            alt="Professional Education Consultancy"
+            style={{
+              width: "100%",
+              height: "300px",
+              objectFit: "cover",
+              borderRadius: "20px",
+              marginBottom: "40px",
+              boxShadow: "0 15px 25px rgba(0,0,0,0.1)"
+            }}
+          />
+        </div>
+
         <div className="trust-grid">
           {trustFactors.map((factor, index) =>
             <div key={index} className="trust-card">
@@ -61,7 +76,7 @@ const TrustFactors = () => {
         <div className="mission-statement">
           <div className="mission-content">
             <h3>📌 Our Mission</h3>
-            <p>
+            <p className="mission-text">
               To make British higher education accessible, affordable, and
               achievable for every deserving student — regardless of background
               — through free, personalized, and ethical counselling.

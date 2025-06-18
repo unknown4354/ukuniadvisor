@@ -6,6 +6,20 @@ const About = () => {
       <div className="container">
         <div className="about-content">
           <div className="about-text">
+            <div className="about-hero-image">
+              <img
+                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.1.0"
+                alt="UK University Campus"
+                style={{
+                  width: "100%",
+                  height: "300px",
+                  objectFit: "cover",
+                  borderRadius: "15px",
+                  marginBottom: "30px",
+                  boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)"
+                }}
+              />
+            </div>
             <h2>Your Trusted Advisor for British Education</h2>
             <p>
               At UKuniadvisor, we specialize exclusively in guiding students to

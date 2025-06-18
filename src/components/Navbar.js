@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,66 +16,77 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = sectionId => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   };
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+  const isActivePage = path => {
+    return location.pathname === path;
   };
 
   return (
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
-        <a
-          href="#home"
-          className="navbar-logo"
-          onClick={() => scrollToSection("home")}
-        >
+        <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           UK<span>uni</span>advisor
-        </a>
+        </Link>
 
         <ul
           className={`navbar-nav ${isMobileMenuOpen ? "mobile-menu-open" : ""}`}
         >
           <li>
-            <a href="#about" onClick={() => scrollToSection("about")}>
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#services" onClick={() => scrollToSection("services")}>
-              Services
-            </a>
-          </li>
-          <li>
-            <a href="#process" onClick={() => scrollToSection("process")}>
-              Process
-            </a>
-          </li>
-          <li>
-            <a
-              href="#testimonials"
-              onClick={() => scrollToSection("testimonials")}
+            <Link
+              to="/about"
+              className={isActivePage("/about") ? "active" : ""}
+              onClick={closeMobileMenu}
             >
-              Testimonials
-            </a>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/services"
+              className={isActivePage("/services") ? "active" : ""}
+              onClick={closeMobileMenu}
+            >
+              Services
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/process"
+              className={isActivePage("/process") ? "active" : ""}
+              onClick={closeMobileMenu}
+            >
+              Process
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/success-stories"
+              className={isActivePage("/success-stories") ? "active" : ""}
+              onClick={closeMobileMenu}
+            >
+              Success Stories
+            </Link>
           </li>
           <li className="theme-toggle-nav">
             <ThemeToggle />
           </li>
           <li>
-            <a
-              href="#consultation"
-              onClick={() => scrollToSection("consultation")}
-              className="btn btn-primary navbar-cta"
+            <Link
+              to="/contact"
+              className={`btn btn-primary navbar-cta ${isActivePage("/contact")
+                ? "active"
+                : ""}`}
+              onClick={closeMobileMenu}
             >
               Book Consultation
-            </a>
+            </Link>
           </li>
         </ul>
 
@@ -89,10 +102,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen &&
-        <div
-          className="mobile-menu-overlay"
-          onClick={() => setIsMobileMenuOpen(false)}
-        />}
+        <div className="mobile-menu-overlay" onClick={closeMobileMenu} />}
     </nav>
   );
 };

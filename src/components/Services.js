@@ -78,6 +78,21 @@ const Services = () => {
           <div className="underline" />
         </div>
 
+        <div className="services-hero-image">
+          <img
+            src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.1.0"
+            alt="UK Universities - Your Education Journey"
+            style={{
+              width: "100%",
+              height: "250px",
+              objectFit: "cover",
+              borderRadius: "15px",
+              marginBottom: "40px",
+              boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)"
+            }}
+          />
+        </div>
+
         <div className="services-intro">
           <p>
             At UKuniadvisor, we provide 100% free, personalized support to

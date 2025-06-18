@@ -36,26 +36,17 @@ const Hero = () => {
             </div>
           </div>
           <div className="hero-image">
-            <div
+            <img
+              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Students studying - UK Education Journey"
               style={{
                 width: "100%",
                 height: "400px",
-                background: "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
+                objectFit: "cover",
                 borderRadius: "20px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "white",
-                fontSize: "1.2rem",
-                fontWeight: "600",
-                textAlign: "center",
                 boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)"
               }}
-            >
-              🎓 Your UK Education Journey Starts Here
-              <br />
-              📚 Top Universities Await You
-            </div>
+            />
           </div>
         </div>
       </div>
