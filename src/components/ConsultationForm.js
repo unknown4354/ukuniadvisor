@@ -5,6 +5,7 @@ const ConsultationForm = () => {
     name: "",
     email: "",
     phone: "",
+    preferredContactMethod: "",
     preferredDate: "",
     preferredTime: "",
     areaOfInterest: "",
@@ -69,6 +70,10 @@ const ConsultationForm = () => {
       newErrors.phone = "Phone number is required";
     }
 
+    if (!formData.preferredContactMethod) {
+      newErrors.preferredContactMethod = "Preferred contact method is required";
+    }
+
     if (!formData.preferredDate) {
       newErrors.preferredDate = "Preferred date is required";
     }
@@ -110,6 +115,7 @@ const ConsultationForm = () => {
           name: "",
           email: "",
           phone: "",
+          preferredContactMethod: "",
           preferredDate: "",
           preferredTime: "",
           areaOfInterest: "",
@@ -169,8 +175,8 @@ const ConsultationForm = () => {
     <section id="consultation" className="consultation-form">
       <div className="container">
         <div className="section-header">
-          <h2>Book Your Free Consultation</h2>
-          <p>Take the first step towards your UK education journey</p>
+                     <h2>Book Your Free Consultation</h2>
+          <p>Take the first step toward your UK education journey.</p>
           <div className="underline" />
         </div>
 
@@ -252,6 +258,26 @@ const ConsultationForm = () => {
               {errors.phone &&
                 <span className="error-message">
                   {errors.phone}
+                </span>}
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="preferredContactMethod">Preferred Contact Method *</label>
+              <select
+                id="preferredContactMethod"
+                name="preferredContactMethod"
+                value={formData.preferredContactMethod}
+                onChange={handleInputChange}
+                className={errors.preferredContactMethod ? "error" : ""}
+              >
+                <option value="">Select a contact method</option>
+                <option value="WhatsApp">WhatsApp</option>
+                <option value="Phone Call">Phone Call</option>
+                <option value="Email">Email</option>
+              </select>
+              {errors.preferredContactMethod &&
+                <span className="error-message">
+                  {errors.preferredContactMethod}
                 </span>}
             </div>
 

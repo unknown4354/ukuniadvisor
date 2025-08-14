@@ -40,6 +40,11 @@
   --bg-blue: var(--uk-blue); /* Blue background for accents */
   --bg-red-light: rgba(200, 16, 46, 0.1); /* Light red background */
   --bg-blue-light: rgba(1, 33, 105, 0.1); /* Light blue background */
+
+  /* Theme support (missing variables) */
+  --bg-color: var(--bg-secondary);
+  --text-color: var(--text-primary);
+  --card-bg: var(--bg-primary);
   
   /* Shadows and effects */
   --backdrop-blur: blur(20px);
@@ -117,6 +122,11 @@
   --bg-blue: var(--uk-blue); /* Bright blue background for accents */
   --bg-red-light: rgba(255, 51, 102, 0.1); /* Light red background */
   --bg-blue-light: rgba(66, 135, 245, 0.1); /* Light blue background */
+
+  /* Theme support (missing variables) */
+  --bg-color: var(--bg-primary);
+  --text-color: var(--text-primary);
+  --card-bg: var(--bg-secondary);
   
   /* Shadows and effects */
   --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -581,8 +591,7 @@ section::before {
 }
 
 .hero-text .highlight {
-  color: var(--primary-color);
-  position: relative;
+  color: var(--uk-red);
 }
 
 .hero-text p {
@@ -2976,7 +2985,7 @@ main {
 
 /* Navigation Active States */
 .navbar-nav a.active {
-  color: var(--primary-color) !important;
+  color: var(--uk-red) !important;
   font-weight: 600;
 }
 
@@ -3585,7 +3594,7 @@ main {
 /* Service Card Image Styles */
 .service-card {
   overflow: hidden;
-  padding: 0;
+  padding: 48px 32px;
 }
 
 .service-image {

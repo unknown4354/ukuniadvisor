@@ -8,9 +8,9 @@ const AboutPage = () => {
       <section className="page-header uk-flag-bg">
         <div className="container">
           <h1>About UkUniAdviser</h1>
-          <p>Your Online Trusted Partner For British Higher Education</p>
+          <p>Your Trusted Online Partner for British Higher Education</p>
           <p>British Council Certified Counsellors</p>
-          <p><strong>Online Guidance</strong> at the comfort of your home and time</p>
+          <p><strong>Online guidance</strong> from the comfort of your home, at a time that suits you</p>
         </div>
       </section>
 

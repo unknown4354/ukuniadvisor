@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const path = require("path");
+const nodemailer = require("nodemailer");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -12,7 +13,16 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "build")));
 
-// Simple API endpoint to book consultation (simplified version)
+// Email Transporter
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS
+  }
+});
+
+// Simple API endpoint to book consultation (enhanced with email notification)
 app.post("/api/book-consultation", async (req, res) => {
   try {
     const formData = req.body;
@@ -22,6 +32,7 @@ app.post("/api/book-consultation", async (req, res) => {
       "name",
       "email",
       "phone",
+      "preferredContactMethod",
       "preferredDate",
       "preferredTime",
       "areaOfInterest"
@@ -32,10 +43,59 @@ app.post("/api/book-consultation", async (req, res) => {
       }
     }
 
-    // For now, just log the booking (replace with actual implementation later)
+    // Prepare email content
+    const toEmail = "contact@ukuniadviser.com";
+    const subject = `New Consultation Booking: ${formData.name} — ${formData.areaOfInterest}`;
+
+    const html = `
+      <div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#111">
+        <h2 style="margin:0 0 12px">New Consultation Booking</h2>
+        <p style="margin:4px 0">A new consultation has been booked via the website. Details are below:</p>
+        <hr style="border:none;border-top:1px solid #e5e7eb;margin:12px 0" />
+        <table style="width:100%;max-width:640px;border-collapse:collapse">
+          <tbody>
+            <tr><td style="padding:6px 0;width:220px;color:#555">Full Name</td><td style="padding:6px 0;font-weight:600">${formData.name}</td></tr>
+            <tr><td style="padding:6px 0;color:#555">Email</td><td style="padding:6px 0">${formData.email}</td></tr>
+            <tr><td style="padding:6px 0;color:#555">Phone</td><td style="padding:6px 0">${formData.phone}</td></tr>
+            <tr><td style="padding:6px 0;color:#555">Preferred Contact Method</td><td style="padding:6px 0">${formData.preferredContactMethod}</td></tr>
+            <tr><td style="padding:6px 0;color:#555">Preferred Date</td><td style="padding:6px 0">${formData.preferredDate}</td></tr>
+            <tr><td style="padding:6px 0;color:#555">Preferred Time</td><td style="padding:6px 0">${formData.preferredTime}</td></tr>
+            <tr><td style="padding:6px 0;color:#555">Area of Interest</td><td style="padding:6px 0">${formData.areaOfInterest}</td></tr>
+            ${formData.message ? `<tr><td style="padding:6px 0;color:#555">Additional Message</td><td style="padding:6px 0">${formData.message}</td></tr>` : ""}
+          </tbody>
+        </table>
+        <hr style="border:none;border-top:1px solid #e5e7eb;margin:12px 0" />
+        <p style="margin:4px 0;color:#555">This notification was sent automatically by UkUniAdviser website.</p>
+      </div>
+    `;
+
+    const text = `New Consultation Booking\n\n` +
+      `Full Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Phone: ${formData.phone}\n` +
+      `Preferred Contact Method: ${formData.preferredContactMethod}\n` +
+      `Preferred Date: ${formData.preferredDate}\n` +
+      `Preferred Time: ${formData.preferredTime}\n` +
+      `Area of Interest: ${formData.areaOfInterest}\n` +
+      (formData.message ? `Message: ${formData.message}\n` : ``);
+
+    // Send email
+    await transporter.sendMail({
+      from: {
+        name: "UkUniAdviser Notifications",
+        address: process.env.EMAIL_USER || "no-reply@ukuniadviser.com"
+      },
+      to: toEmail,
+      replyTo: formData.email,
+      subject,
+      text,
+      html
+    });
+
+    // Also log for audit
     console.log("New consultation booking:", formData);
 
-    // Simulate successful booking
+    // Success response
     res.status(200).json({
       success: true,
       message: "Consultation booked successfully",
@@ -91,7 +151,7 @@ app.listen(PORT, () => {
   console.log("2. Configure email settings");
   console.log("3. Update environment variables");
   console.log("");
-  console.log("ℹ️  For now, the server will log bookings to console");
+  console.log("ℹ️  For now, the server will log bookings to console and send notification emails (if EMAIL_USER/PASS are configured).");
 });
 
 module.exports = app;

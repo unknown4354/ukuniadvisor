@@ -9,8 +9,8 @@ const TrustFactors = () => {
     },
     {
       icon: "🎓",
-      title: "UK-educated leadership",
-      description: "with lived experience"
+      title: "UK‑Educated Leadership",
+      description: "With lived experience"
     },
     {
       icon: "📅",
@@ -19,13 +19,13 @@ const TrustFactors = () => {
     },
     {
       icon: "🆓",
-      title: "Free services",
-      description: "No Fees. No Confusion. Just Honest Expert Guidance."
+      title: "Free Services",
+      description: "No fees. No confusion. Just honest, expert guidance."
     },
     {
       icon: "🎯",
-      title: "100% focus on UK",
-      description: "Online guidance at the comfort of your home and time"
+      title: "100% Focus on the UK",
+      description: "Online guidance from the comfort of your home, at a time that suits you"
     },
     {
       icon: "✅",
@@ -44,8 +44,8 @@ const TrustFactors = () => {
 
         <div className="trust-hero-image">
           <img
-            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.1.0"
-            alt="Professional Education Consultancy"
+            src="https://images.unsplash.com/photo-1520975922291-9cd175dc1be7?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.1.0"
+            alt="Professional Education Consultancy in the UK"
             style={{
               width: "100%",
               height: "300px",
