@@ -14,8 +14,8 @@ const Hero = () => {
         <div className="hero-content">
           <div className="hero-text">
             <h1>
-              Study in the <span className="highlight">UK</span> with
-              <span className="highlight"> 100% Free</span> online expert guidance
+              Study in the <span className="highlight-uk">UK</span> with
+              <span className="highlight-free"> 100% Free</span> online expert guidance
             </h1>
             <p>
               We provide completely free, online, personalized support to students from
@@ -36,8 +36,8 @@ const Hero = () => {
           </div>
           <div className="hero-image">
             <img
-              src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0"
-              alt="Study in the UK — London Tower Bridge"
+              src="https://images.unsplash.com/photo-1564981797816-1043664bf78d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3"
+              alt="UK University Campus - Oxford University"
               style={{
                 width: "100%",
                 height: "400px",

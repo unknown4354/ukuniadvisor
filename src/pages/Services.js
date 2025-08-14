@@ -69,7 +69,7 @@ const ServicesPage = () => {
               </p>
             </div>
             <div className="faq-item">
-              <h3>How long does the application process take?</h3>
+              <h3>How long does the Application process take?</h3>
               <p>
                                  The timeline varies by program and University, but typically
                 ranges from 2-6 months from Application to offer. We'll provide

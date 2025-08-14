@@ -56,7 +56,7 @@ const AboutPage = () => {
               <div className="icon">🎓</div>
               <h3>UK-Educated Leadership</h3>
               <p>
-                Personal experience studying in Cardiff and Surrey universities
+                Personal experience studying in Cardiff and Surrey Universities
               </p>
             </div>
             <div className="expertise-item">

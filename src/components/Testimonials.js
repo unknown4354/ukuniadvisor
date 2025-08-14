@@ -4,7 +4,6 @@ const Testimonials = () => {
   const testimonials = [
     {
       name: "Priya Sharma",
-      location: "Delhi, India",
       university: "University of Manchester",
       course: "MSc Data Science",
       rating: 5,
@@ -14,22 +13,20 @@ const Testimonials = () => {
     },
     {
       name: "James Okafor",
-      location: "Lagos, Nigeria",
       university: "University of Edinburgh",
       course: "MBA",
       rating: 5,
       text:
-        "The team at UkUniAdviser was incredibly supportive throughout my application journey. Their expertise in UK education and free online consultation saved me time and money. I received offers from multiple universities and chose Edinburgh for my MBA.",
+        "The team at UkUniAdviser was incredibly supportive throughout my Application journey. Their expertise in UK education and free online consultation saved me time and money. I received offers from multiple Universities and chose Edinburgh for my MBA.",
       image: "👨‍🎓"
     },
     {
       name: "Fatima Al-Zahra",
-      location: "Cairo, Egypt",
       university: "King's College London",
       course: "LLM International Law",
       rating: 5,
       text:
-        "I was initially overwhelmed by the UK application process, but UkUniAdviser's step-by-step online guidance made everything clear. They helped me craft a compelling personal statement and prepared me for the visa interview. Now I'm studying law at KCL!",
+        "I was initially overwhelmed by the UK Application process, but UkUniAdviser's step-by-step online guidance made everything clear. They helped me craft a compelling personal statement and prepared me for the visa interview. Now I'm studying law at KCL!",
       image: "👩‍💼"
     }
   ];

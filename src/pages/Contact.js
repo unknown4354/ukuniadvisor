@@ -127,7 +127,7 @@ const Contact = () => {
             <div className="faq-item">
               <h3>Is there really no cost for your services?</h3>
               <p>
-                Absolutely none. We're funded by our university partners,
+                Absolutely none. We're funded by our University partners,
                 allowing us to provide completely free guidance to students.
               </p>
             </div>
@@ -135,7 +135,7 @@ const Contact = () => {
               <h3>Do you help with all types of UK programs?</h3>
               <p>
                 Yes, we assist with undergraduate, postgraduate, foundation
-                courses, and research programs across all major UK universities.
+                courses, and research programs across all major UK Universities.
               </p>
             </div>
           </div>

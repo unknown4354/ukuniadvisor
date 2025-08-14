@@ -765,7 +765,7 @@ section::before {
 
 .service-card {
   background: var(--glass-white-strong);
-  padding: 48px 32px;
+  padding: 56px 40px;
   border-radius: 16px;
   transition: var(--transition);
   border: 1px solid var(--glass-border);
@@ -807,13 +807,13 @@ section::before {
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--primary-black);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .service-description {
   font-size: 1.1rem;
   color: var(--text-secondary);
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   line-height: 1.6;
 }
 
@@ -822,11 +822,12 @@ section::before {
 }
 
 .service-features li {
-  padding: 10px 0;
+  padding: 14px 0;
   color: var(--text-primary);
   position: relative;
-  padding-left: 28px;
+  padding-left: 32px;
   transition: var(--transition-fast);
+  line-height: 1.8;
 }
 
 .service-features li:hover {
@@ -2987,11 +2988,33 @@ main {
 .navbar-nav a.active {
   color: var(--uk-red) !important;
   font-weight: 600;
+  position: relative;
+}
+
+.navbar-nav a.active::after {
+  width: 100% !important;
+  background: var(--uk-red) !important;
+}
+
+/* Dark theme active states */
+.dark .navbar-nav a.active {
+  color: var(--uk-red) !important;
+}
+
+.dark .navbar-nav a.active::after {
+  background: var(--uk-red) !important;
 }
 
 .navbar-nav .btn.active {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
+  background: var(--uk-red) !important;
+  border-color: var(--uk-red) !important;
+  color: white !important;
+  font-weight: 600;
+}
+
+.dark .navbar-nav .btn.active {
+  background: var(--uk-red) !important;
+  border-color: var(--uk-red) !important;
   color: white !important;
 }
 
@@ -3970,4 +3993,33 @@ main {
 /* Highlight Utility */
 .highlight {
   color: var(--primary-color);
+}
+
+/* Hero Highlight Classes with Better Visibility */
+.highlight-uk {
+  color: var(--uk-red);
+  font-weight: 800;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-free {
+  background: linear-gradient(135deg, var(--uk-red), var(--uk-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Dark mode hero highlights */
+.dark .highlight-uk {
+  color: #ff3366;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.dark .highlight-free {
+  background: linear-gradient(135deg, #ff3366, #4287f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
