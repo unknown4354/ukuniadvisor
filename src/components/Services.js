@@ -11,7 +11,7 @@ const Services = () => {
         "Identify the best Universities based on your goals and budget",
         "Understand entry requirements",
         "Apply to multiple UK Universities with strong success rates",
-        "Track your Application and respond to offers"
+        "Track your Applications and respond to offers"
       ]
     },
     {
