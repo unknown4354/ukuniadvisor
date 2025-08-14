@@ -18,9 +18,9 @@ const Hero = () => {
               <span className="highlight"> 100% Free</span> Online Expert Guidance
             </h1>
             <p>
-              We provide completely free, Online, personalized support to students from
+              We provide completely free online personalized support to students from
               Asia and Africa who want to study in the United Kingdom. From
-              university applications to visa guidance, all at the comfort of your home and time.
+              University Applications to visa guidance, all from the comfort of your home and at your convenience.
             </p>
             <div className="hero-buttons">
               <button
@@ -36,8 +36,8 @@ const Hero = () => {
           </div>
           <div className="hero-image">
             <img
-              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Students studying - UK Education Journey"
+              src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="UK University Campus - Your Education Journey"
               style={{
                 width: "100%",
                 height: "400px",
