@@ -5,6 +5,7 @@ const ConsultationForm = () => {
     name: "",
     email: "",
     phone: "",
+    preferredContactMethod: "",
     preferredDate: "",
     preferredTime: "",
     areaOfInterest: "",
@@ -24,6 +25,12 @@ const ConsultationForm = () => {
     "Visa Guidance",
     "Scholarship Information",
     "General Inquiry"
+  ];
+
+  const contactMethods = [
+    "WhatsApp",
+    "Phone Call",
+    "Email"
   ];
 
   const timeSlots = [
@@ -69,6 +76,10 @@ const ConsultationForm = () => {
       newErrors.phone = "Phone number is required";
     }
 
+    if (!formData.preferredContactMethod) {
+      newErrors.preferredContactMethod = "Preferred contact method is required";
+    }
+
     if (!formData.preferredDate) {
       newErrors.preferredDate = "Preferred date is required";
     }
@@ -110,6 +121,7 @@ const ConsultationForm = () => {
           name: "",
           email: "",
           phone: "",
+          preferredContactMethod: "",
           preferredDate: "",
           preferredTime: "",
           areaOfInterest: "",
@@ -252,6 +264,28 @@ const ConsultationForm = () => {
               {errors.phone &&
                 <span className="error-message">
                   {errors.phone}
+                </span>}
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="preferredContactMethod">Preferred Contact Method *</label>
+              <select
+                id="preferredContactMethod"
+                name="preferredContactMethod"
+                value={formData.preferredContactMethod}
+                onChange={handleInputChange}
+                className={errors.preferredContactMethod ? "error" : ""}
+              >
+                <option value="">Select how you'd like to be contacted</option>
+                {contactMethods.map((method, index) =>
+                  <option key={index} value={method}>
+                    {method}
+                  </option>
+                )}
+              </select>
+              {errors.preferredContactMethod &&
+                <span className="error-message">
+                  {errors.preferredContactMethod}
                 </span>}
             </div>
 

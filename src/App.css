@@ -578,11 +578,14 @@ section::before {
   color: var(--primary-black);
   line-height: 1.2;
   margin-bottom: 32px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .hero-text .highlight {
-  color: var(--primary-color);
+  color: var(--uk-red);
   position: relative;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 900;
 }
 
 .hero-text p {
@@ -756,7 +759,7 @@ section::before {
 
 .service-card {
   background: var(--glass-white-strong);
-  padding: 48px 32px;
+  padding: 56px 40px;
   border-radius: 16px;
   transition: var(--transition);
   border: 1px solid var(--glass-border);
@@ -2976,14 +2979,27 @@ main {
 
 /* Navigation Active States */
 .navbar-nav a.active {
-  color: var(--primary-color) !important;
+  color: var(--uk-red) !important;
   font-weight: 600;
+  position: relative;
+}
+
+.navbar-nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--uk-red);
+  border-radius: 1px;
 }
 
 .navbar-nav .btn.active {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
+  background-color: var(--uk-red);
+  border-color: var(--uk-red);
   color: white !important;
+  transform: scale(1.05);
 }
 
 /* Home Page Specific Styles */
@@ -3585,7 +3601,7 @@ main {
 /* Service Card Image Styles */
 .service-card {
   overflow: hidden;
-  padding: 0;
+  padding: 56px 40px;
 }
 
 .service-image {

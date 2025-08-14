@@ -3,16 +3,56 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const path = require("path");
+const nodemailer = require("nodemailer");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+// Email configuration
+const transporter = nodemailer.createTransporter({
+  service: 'gmail',
+  auth: {
+    user: process.env.EMAIL_USER || 'your-email@gmail.com',
+    pass: process.env.EMAIL_PASS || 'your-app-password'
+  }
+});
+
+// Function to format consultation email
+const formatConsultationEmail = (formData) => {
+  return `
+    <h2>New Consultation Booking - UkUniAdviser</h2>
+    
+    <h3>Client Information:</h3>
+    <ul>
+      <li><strong>Name:</strong> ${formData.name}</li>
+      <li><strong>Email:</strong> ${formData.email}</li>
+      <li><strong>Phone:</strong> ${formData.phone}</li>
+      <li><strong>Preferred Contact Method:</strong> ${formData.preferredContactMethod || 'Not specified'}</li>
+    </ul>
+    
+    <h3>Consultation Details:</h3>
+    <ul>
+      <li><strong>Preferred Date:</strong> ${formData.preferredDate}</li>
+      <li><strong>Preferred Time:</strong> ${formData.preferredTime}</li>
+      <li><strong>Area of Interest:</strong> ${formData.areaOfInterest}</li>
+    </ul>
+    
+    ${formData.message ? `
+    <h3>Additional Message:</h3>
+    <p>${formData.message}</p>
+    ` : ''}
+    
+    <hr>
+    <p><small>This consultation booking was submitted on ${new Date().toLocaleString()}</small></p>
+  `;
+};
 
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "build")));
 
-// Simple API endpoint to book consultation (simplified version)
+// API endpoint to book consultation with email functionality
 app.post("/api/book-consultation", async (req, res) => {
   try {
     const formData = req.body;
@@ -32,8 +72,24 @@ app.post("/api/book-consultation", async (req, res) => {
       }
     }
 
-    // For now, just log the booking (replace with actual implementation later)
+    // Log the booking
     console.log("New consultation booking:", formData);
+
+    // Send email notification
+    try {
+      const mailOptions = {
+        from: process.env.EMAIL_USER || 'noreply@ukuniadviser.com',
+        to: 'contact@ukuniadviser.com',
+        subject: `New Consultation Booking - ${formData.name}`,
+        html: formatConsultationEmail(formData)
+      };
+
+      await transporter.sendMail(mailOptions);
+      console.log("Email notification sent successfully");
+    } catch (emailError) {
+      console.error("Error sending email:", emailError);
+      // Continue with success response even if email fails
+    }
 
     // Simulate successful booking
     res.status(200).json({

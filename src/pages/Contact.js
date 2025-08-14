@@ -133,7 +133,7 @@ const Contact = () => {
               <h3>Do you help with all types of UK programs?</h3>
               <p>
                 Yes, we assist with undergraduate, postgraduate, foundation
-                courses, and research programs across all major UK universities.
+                courses, and research programs across all major UK Universities.
               </p>
             </div>
           </div>

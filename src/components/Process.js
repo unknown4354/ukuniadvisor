@@ -27,7 +27,7 @@ const Process = () => {
       number: "04",
       title: "University Applications",
       description:
-        "We submit your applications to UK universities and follow up with them directly on your behalf.",
+        "We submit your Applications to UK Universities and follow up with them directly on your behalf.",
       icon: "📤"
     },
     {

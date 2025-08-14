@@ -15,7 +15,7 @@ const Home = () => {
       icon: "📑",
       title: "Visa Support",
       description:
-        "Complete assistance with UK student visa applications and interviews"
+        "Complete assistance with UK student visa Applications and interviews"
     },
     {
       icon: "🎯",
@@ -36,9 +36,9 @@ const Home = () => {
             <h2>Your Trusted Partner for UK Education</h2>
             <p>
               With over 20 years of experience and British Council
-              certification, we provide completely free, Online expert guidance to
+              certification, we provide completely free online expert guidance to
               students from Asia and Africa who want to study in the United
-              Kingdom at the comfort of their home and time.
+              Kingdom from the comfort of their home and at their convenience.
             </p>
             <div className="home-stats">
               <div className="stat-item">
