@@ -32,7 +32,7 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-          UK<span>uni</span>advisor
+          UkUniAdviser
         </Link>
 
         <ul

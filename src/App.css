@@ -25,6 +25,17 @@
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   --ease-glass: cubic-bezier(0.4, 0, 0.2, 1);
+  /* UK Flag Theme Colors */
+  --primary-color: #c8102e; /* Union Jack Red */
+  --secondary-color: #012169; /* Union Jack Blue */
+  --primary-navy: #012169;
+  --secondary-navy: #0a2c6b;
+  --white: #ffffff;
+  --primary-sage: #012169; /* repurpose to blue for accent consistency */
+  --secondary-sage: #c8102e; /* repurpose to red */
+  --accent-sage: #264796; /* mid blue accent */
+  --success-green: #0b7;
+  --border-color: rgba(0,0,0,0.1);
 }
 
 /* Dark Theme Variables */
@@ -480,7 +491,7 @@ section::before {
 }
 
 .hero-text .highlight {
-  color: var(--accent-black);
+  color: var(--primary-color);
   position: relative;
 }
 
@@ -3820,4 +3831,32 @@ main {
 
 .why-free-content:hover .why-free-image img {
   transform: scale(1.05);
+}
+
+/* UK Flag Background Helpers */
+.uk-flag-theme {
+  background-color: var(--white);
+}
+
+.uk-flag-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.uk-flag-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(1,33,105,0.15) 0%, rgba(200,16,46,0.15) 100%);
+  z-index: 0;
+}
+
+.uk-flag-bg .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Highlight Utility */
+.highlight {
+  color: var(--primary-color);
 }

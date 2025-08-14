@@ -10,7 +10,7 @@ const SuccessStories = () => {
       course: "MSc Computer Science",
       year: "2023",
       story:
-        "The visa process seemed overwhelming until UKuniadvisor stepped in. Their mock interviews and document guidance made all the difference. Now I'm studying at one of the world's top universities for technology."
+        "The visa process seemed overwhelming until UkUniAdviser stepped in. Their mock interviews and document guidance made all the difference. Now I'm studying at one of the world's top universities for technology."
     },
     {
       name: "Amara Osei",
@@ -19,7 +19,7 @@ const SuccessStories = () => {
       course: "MSc International Management",
       year: "2022",
       story:
-        "I almost gave up on my UK dream due to financial concerns. UKuniadvisor helped me find a scholarship that covered 50% of my tuition. Their support was invaluable throughout the entire journey."
+        "I almost gave up on my UK dream due to financial concerns. UkUniAdviser helped me find a scholarship that covered 50% of my tuition. Their support was invaluable throughout the entire journey."
     },
     {
       name: "Hassan Ali",
@@ -91,8 +91,8 @@ const SuccessStories = () => {
               <div className="detail">Across 50+ UK universities</div>
             </div>
             <div className="number-card">
-              <div className="number">95%</div>
-              <div className="label">Visa Success Rate</div>
+                    <div className="number">99%</div>
+      <div className="label">Success Rate</div>
               <div className="detail">Above industry average</div>
             </div>
             <div className="number-card">

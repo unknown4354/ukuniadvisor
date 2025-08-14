@@ -15,13 +15,12 @@ const Hero = () => {
           <div className="hero-text">
             <h1>
               Study in the <span className="highlight">UK</span> with
-              <span className="highlight"> 100% Free</span> Expert Guidance
+              <span className="highlight"> 100% Free</span> Online Expert Guidance
             </h1>
             <p>
-              We provide completely free, personalized support to students from
+              We provide completely free, Online, personalized support to students from
               Asia and Africa who want to study in the United Kingdom. From
-              university applications to visa guidance, we're here to make your
-              UK education dream a reality.
+              university applications to visa guidance, all at the comfort of your home and time.
             </p>
             <div className="hero-buttons">
               <button
