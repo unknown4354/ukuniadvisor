@@ -39,7 +39,7 @@ const ServicesPage = () => {
               <div className="icon">💯</div>
               <h3>No Hidden Costs</h3>
               <p>
-                Our services are ABSOLUTELY Free from choosing the university of your choice to Visa and Beyond.
+                Our services are ABSOLUTELY Free from choosing the University of your choice to Visa and Beyond.
               </p>
             </div>
           </div>
@@ -53,7 +53,7 @@ const ServicesPage = () => {
           <div className="faq-grid">
             
             <div className="faq-item">
-              <h3>Do you guarantee university admission?</h3>
+              <h3>Do you guarantee University admission?</h3>
               <p>
                 While we can't guarantee admissions (no ethical consultant can),
                 our 95% success rate speaks to our expertise in maximizing your
@@ -71,8 +71,8 @@ const ServicesPage = () => {
             <div className="faq-item">
               <h3>How long does the application process take?</h3>
               <p>
-                The timeline varies by program and university, but typically
-                ranges from 2-6 months from application to offer. We'll provide
+                                 The timeline varies by program and University, but typically
+                ranges from 2-6 months from Application to offer. We'll provide
                 a personalized timeline during your consultation.
               </p>
             </div>

@@ -63,7 +63,7 @@ const ProcessPage = () => {
             <div className="expect-item">
               <div className="step">2</div>
               <h3>University Matching</h3>
-              <p>Receive personalized university and course recommendations</p>
+              <p>Receive personalized University and course recommendations</p>
             </div>
             <div className="expect-item">
               <div className="step">3</div>

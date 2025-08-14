@@ -15,12 +15,12 @@ const Hero = () => {
           <div className="hero-text">
             <h1>
               Study in the <span className="highlight">UK</span> with
-              <span className="highlight"> 100% Free</span> Online Expert Guidance
+              <span className="highlight"> 100% Free</span> online expert guidance
             </h1>
             <p>
-              We provide completely free, Online, personalized support to students from
-              Asia and Africa who want to study in the United Kingdom. From
-              university applications to visa guidance, all at the comfort of your home and time.
+              We provide completely free, online, personalized support to students from
+              Asia and Africa who wish to study in the United Kingdom. From
+              University Applications to visa guidance—delivered from the comfort of your home, at a time that suits you.
             </p>
             <div className="hero-buttons">
               <button
@@ -36,8 +36,8 @@ const Hero = () => {
           </div>
           <div className="hero-image">
             <img
-              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Students studying - UK Education Journey"
+              src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0"
+              alt="Study in the UK — London Tower Bridge"
               style={{
                 width: "100%",
                 height: "400px",

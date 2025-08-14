@@ -6,19 +6,19 @@ const Services = () => {
       icon: "🎓",
       title: "UK University Application Assistance",
       description:
-        "Choosing the right university and course is the first step.",
+        "Choosing the right University and course is the first step.",
       features: [
-        "Identify the best universities based on your goals and budget",
+        "Identify the best Universities based on your goals and budget",
         "Understand entry requirements",
-        "Apply to multiple UK universities with strong success rates",
-        "Track your application and respond to offers"
+        "Apply to multiple UK Universities with strong success rates",
+        "Track your Application and respond to offers"
       ]
     },
     {
       icon: "✍️",
       title: "Personal Statement & SOP Guidance",
       description:
-        "A strong personal statement can make your application stand out.",
+        "A strong personal statement can make your Application stand out.",
       features: [
         "Brainstorming sessions",
         "Review and editing support",
@@ -30,7 +30,7 @@ const Services = () => {
       title: "Visa & Immigration Support",
       description: "Applying for a UK student visa (Tier 4/Student Route)?",
       features: [
-        "Visa application documentation",
+        "Visa Application documentation",
         "CAS letter and financial requirements",
         "Visa interview tips and mock interviews",
         "Common mistakes to avoid"
@@ -42,7 +42,7 @@ const Services = () => {
       description: "Don't miss out on opportunities to reduce your cost.",
       features: [
         "List of available UK scholarships",
-        "Help with scholarship applications and documents",
+        "Help with scholarship Applications and documents",
         "Advice on part-time work rules and financial planning"
       ]
     },
@@ -51,7 +51,7 @@ const Services = () => {
       title: "Pre-Departure & Arrival Support",
       description: "We prepare you for a smooth transition to the UK.",
       features: [
-        "Accommodation guidance (university halls/private housing)",
+        "Accommodation guidance (University halls/private housing)",
         "Flight and travel tips",
         "What to pack checklist",
         "Cultural orientation and student life info"
@@ -74,14 +74,14 @@ const Services = () => {
       <div className="container">
         <div className="section-header">
           <h2>Our Services</h2>
-          <p>Helping You Study in the UK – 100% Free, Online, Personalized support</p>
+          <p>Helping you study in the UK – 100% free, online, personalized support</p>
           <div className="underline" />
         </div>
 
         <div className="services-hero-image">
           <img
             src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.1.0"
-            alt="UK Universities - Your Education Journey"
+            alt="UK Universities — Your Education Journey"
             style={{
               width: "100%",
               height: "250px",
@@ -95,7 +95,7 @@ const Services = () => {
 
         <div className="services-intro">
           <p>
-            At UkUniAdviser, we provide 100% free, Online, personalized support to students who want to study in the United Kingdom. Whether you're applying for an undergraduate, postgraduate, or foundation course, our expert Online guidance simplifies the process and increases your chances of success at the comfort of your home and time.
+            At UkUniAdviser, we provide 100% free, online, personalized support to students who want to study in the United Kingdom. Whether you're applying for an undergraduate, postgraduate, or foundation course, our expert online guidance simplifies the process and increases your chances of success—from the comfort of your home, at a time that suits you.
           </p>
         </div>
 
@@ -129,7 +129,7 @@ const Services = () => {
               Our goal is to make UK education accessible to all, regardless of background.
             </p>
             <h3>💯 No Hidden Costs</h3>
-            <p>Our services are ABSOLUTELY Free from choosing the university of your choice to Visa and Beyond.</p>
+            <p>Our services are ABSOLUTELY Free from choosing the University of your choice to Visa and Beyond.</p>
           </div>
         </div>
       </div>

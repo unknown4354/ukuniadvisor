@@ -13,7 +13,7 @@ const Process = () => {
       number: "02",
       title: "University & Course Shortlisting",
       description:
-        "We help you shortlist the right UK universities and courses based on your background, budget, and career plans.",
+        "We help you shortlist the right UK Universities and courses based on your background, budget, and career plans.",
       icon: "🎓"
     },
     {
@@ -27,7 +27,7 @@ const Process = () => {
       number: "04",
       title: "University Applications",
       description:
-        "We submit your applications to UK universities and follow up with them directly on your behalf.",
+        "We submit your Applications to UK Universities and follow up with them directly on your behalf.",
       icon: "📤"
     },
     {

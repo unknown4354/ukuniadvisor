@@ -86,7 +86,7 @@ const Footer = () => {
                 <div className="contact-icon">📞</div>
                 <div className="contact-details">
                   <p className="contact-label">Phone Support</p>
-                  <p className="contact-value">+91-XXXX-XXXX-XX</p>
+                  <p className="contact-value">9998037257</p>
                   <p className="contact-hours">8:00 AM – 10:30 PM (IST)</p>
                 </div>
               </div>
@@ -95,7 +95,7 @@ const Footer = () => {
                 <div className="contact-icon">💬</div>
                 <div className="contact-details">
                   <p className="contact-label">WhatsApp Chat</p>
-                  <p className="contact-value">+91-XXXX-XXXX-XX</p>
+                  <p className="contact-value">9998037257</p>
                   <p className="contact-hours">8:00 AM – 12:00 PM (IST)</p>
                 </div>
               </div>
@@ -104,8 +104,7 @@ const Footer = () => {
                 <div className="contact-icon">📧</div>
                 <div className="contact-details">
                   <p className="contact-label">Email</p>
-                  <p className="contact-value">info@ukuniadvisor.com</p>
-                  <p className="contact-value">support@ukuniadvisor.com</p>
+                  <p className="contact-value">contact@ukuniadviser.com</p>
                 </div>
               </div>
             </div>

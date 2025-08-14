@@ -4,31 +4,34 @@ import Testimonials from "../components/Testimonials";
 const SuccessStories = () => {
   const additionalStories = [
     {
-      name: "Raj Patel",
-      location: "Mumbai, India",
-      university: "Imperial College London",
-      course: "MSc Computer Science",
-      year: "2023",
-      story:
-        "The visa process seemed overwhelming until UkUniAdviser stepped in. Their mock interviews and document guidance made all the difference. Now I'm studying at one of the world's top universities for technology."
+      name: "Chitranjan Jodha",
+      university: "Birmingham City University",
+      course: "MBA",
+      year: ""
     },
     {
-      name: "Amara Osei",
-      location: "Accra, Ghana",
-      university: "University of Bath",
-      course: "MSc International Management",
-      year: "2022",
-      story:
-        "I almost gave up on my UK dream due to financial concerns. UkUniAdviser helped me find a scholarship that covered 50% of my tuition. Their support was invaluable throughout the entire journey."
+      name: "Dev Sutreja",
+      university: "Cranfield University",
+      course: "MSc Management",
+      year: ""
     },
     {
-      name: "Hassan Ali",
-      location: "Karachi, Pakistan",
+      name: "Yash Thakker",
+      university: "Regent's University London",
+      course: "MA International Business",
+      year: ""
+    },
+    {
+      name: "Yashvi Thakker",
+      university: "Regent's University London",
+      course: "MA International Business",
+      year: ""
+    },
+    {
+      name: "Parth Lalwani",
       university: "University of Warwick",
-      course: "MSc Finance",
-      year: "2023",
-      story:
-        "What impressed me most was their honesty. When my profile didn't match certain universities, they guided me to better alternatives. I ended up at Warwick, which was perfect for my career goals."
+      course: "MSc Entrepreneurship",
+      year: ""
     }
   ];
 
@@ -42,8 +45,7 @@ const SuccessStories = () => {
           <div className="section-header">
             <h2>More Success Stories</h2>
             <p>
-              Every student's journey is unique, but the destination is the
-              same: success
+              Every student's journey is unique, but the destination is the same: success.
             </p>
           </div>
 
@@ -55,23 +57,18 @@ const SuccessStories = () => {
                     <h3>
                       {story.name}
                     </h3>
-                    <p className="location">
-                      {story.location}
-                    </p>
                     <p className="education">
                       {story.course}
                     </p>
                     <p className="university">
                       {story.university}
                     </p>
-                    <span className="year">
-                      {story.year}
-                    </span>
+                    {story.year && <span className="year">{story.year}</span>}
                   </div>
                 </div>
                 <div className="story-content">
                   <p>
-                    "{story.story}"
+                    {/* Intentionally concise without fabricated quotes */}
                   </p>
                 </div>
               </div>
@@ -88,7 +85,7 @@ const SuccessStories = () => {
             <div className="number-card">
               <div className="number">500+</div>
               <div className="label">Students Successfully Placed</div>
-              <div className="detail">Across 50+ UK universities</div>
+              <div className="detail">Across 50+ UK Universities</div>
             </div>
             <div className="number-card">
                     <div className="number">99%</div>
@@ -104,7 +101,7 @@ const SuccessStories = () => {
               <div className="number">85%</div>
               <div className="label">First Choice Acceptances</div>
               <div className="detail">
-                Students get into their preferred university
+                Students get into their preferred University
               </div>
             </div>
           </div>

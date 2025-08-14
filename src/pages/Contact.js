@@ -17,8 +17,9 @@ const Contact = () => {
           <div className="contact-options">
             <div className="contact-card">
               <div className="icon">📞</div>
-              <h3>Phone Consultation</h3>
-              <p>Direct phone support for immediate guidance</p>
+                             <h3>Phone Consultation</h3>
+               <p>Direct phone support for immediate guidance</p>
+               <div className="contact-info"><strong>Phone:</strong> 9998037257</div>
               <div className="contact-details">
                 <p>
                   <strong>Hours:</strong> 8:00 AM – 10:30 PM (IST)
@@ -32,8 +33,9 @@ const Contact = () => {
 
             <div className="contact-card">
               <div className="icon">💬</div>
-              <h3>WhatsApp Chat</h3>
-              <p>Quick responses for your questions</p>
+                             <h3>WhatsApp Chat</h3>
+               <p>Quick responses for your questions</p>
+               <div className="contact-info"><strong>WhatsApp:</strong> 9998037257</div>
               <div className="contact-details">
                 <p>
                   <strong>Hours:</strong> 8:00 AM – 12:00 PM (IST)
