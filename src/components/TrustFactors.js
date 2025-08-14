@@ -4,8 +4,8 @@ const TrustFactors = () => {
   const trustFactors = [
     {
       icon: "🏆",
-      title: "British Council Certified",
-      description: "for accurate and ethical guidance"
+      title: "British Council Certified Counsellors",
+      description: "accurate and ethical guidance"
     },
     {
       icon: "🎓",
@@ -20,16 +20,16 @@ const TrustFactors = () => {
     {
       icon: "🆓",
       title: "Free services",
-      description: "supported by our UK institutional partners"
+      description: "No Fees. No Confusion. Just Honest Expert Guidance."
     },
     {
       icon: "🎯",
       title: "100% focus on UK",
-      description: "not distracted by other destinations"
+      description: "Online guidance at the comfort of your home and time"
     },
     {
       icon: "✅",
-      title: "High success rate",
+      title: "99% Success Rate",
       description: "in admissions and visa approvals"
     }
   ];
@@ -38,7 +38,7 @@ const TrustFactors = () => {
     <section className="trust-factors">
       <div className="container">
         <div className="section-header">
-          <h2>Why Students Trust Us</h2>
+                      <h2>Why Students Trust UkUniAdviser</h2>
           <div className="underline" />
         </div>
 
@@ -77,9 +77,7 @@ const TrustFactors = () => {
           <div className="mission-content">
             <h3>📌 Our Mission</h3>
             <p className="mission-text">
-              To make British higher education accessible, affordable, and
-              achievable for every deserving student — regardless of background
-              — through free, personalized, and ethical counselling.
+              Making British Higher Education accessible, affordable, and achievable for every deserving student through free Online, personalized, and Ethical counselling.
             </p>
           </div>
         </div>

@@ -36,9 +36,9 @@ const Home = () => {
             <h2>Your Trusted Partner for UK Education</h2>
             <p>
               With over 20 years of experience and British Council
-              certification, we provide completely free, expert guidance to
+              certification, we provide completely free, Online expert guidance to
               students from Asia and Africa who want to study in the United
-              Kingdom.
+              Kingdom at the comfort of their home and time.
             </p>
             <div className="home-stats">
               <div className="stat-item">
@@ -46,7 +46,7 @@ const Home = () => {
                 <span className="stat-label">Students Helped</span>
               </div>
               <div className="stat-item">
-                <span className="stat-number">95%</span>
+                <span className="stat-number">99%</span>
                 <span className="stat-label">Success Rate</span>
               </div>
               <div className="stat-item">

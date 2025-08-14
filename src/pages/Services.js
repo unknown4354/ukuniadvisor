@@ -39,8 +39,7 @@ const ServicesPage = () => {
               <div className="icon">💯</div>
               <h3>No Hidden Costs</h3>
               <p>
-                Our services are funded by UK institutional partnerships, not by
-                charging students. Completely transparent and free.
+                Our services are ABSOLUTELY Free from choosing the university of your choice to Visa and Beyond.
               </p>
             </div>
           </div>
@@ -52,14 +51,7 @@ const ServicesPage = () => {
         <div className="container">
           <h2>Frequently Asked Questions</h2>
           <div className="faq-grid">
-            <div className="faq-item">
-              <h3>Why are your services completely free?</h3>
-              <p>
-                We're funded through partnerships with UK institutions who value
-                quality international students. This allows us to provide free
-                guidance without any conflicts of interest.
-              </p>
-            </div>
+            
             <div className="faq-item">
               <h3>Do you guarantee university admission?</h3>
               <p>

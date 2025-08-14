@@ -4,11 +4,13 @@ import TrustFactors from "../components/TrustFactors";
 
 const AboutPage = () => {
   return (
-    <div className="about-page">
-      <section className="page-header">
+    <div className="about-page uk-flag-theme">
+      <section className="page-header uk-flag-bg">
         <div className="container">
-          <h1>About UKuniadvisor</h1>
-          <p>Your trusted partner for British higher education</p>
+          <h1>About UkUniAdviser</h1>
+          <p>Your Online Trusted Partner For British Higher Education</p>
+          <p>British Council Certified Counsellors</p>
+          <p><strong>Online Guidance</strong> at the comfort of your home and time</p>
         </div>
       </section>
 
@@ -21,7 +23,7 @@ const AboutPage = () => {
           <div className="story-content">
             <h2>Our Story</h2>
             <p>
-              UKuniadvisor was born from a simple belief: every deserving
+              UkUniAdviser was born from a simple belief: every deserving
               student should have access to world-class British education,
               regardless of their background or financial situation.
             </p>
@@ -33,7 +35,7 @@ const AboutPage = () => {
             </p>
             <p>
               Today, we've helped over 500 students achieve their UK education
-              dreams, maintaining a 95% success rate while keeping our services
+              dreams, maintaining a 99% success rate while keeping our services
               completely free.
             </p>
           </div>
@@ -43,12 +45,12 @@ const AboutPage = () => {
       {/* Team Section */}
       <section className="our-team">
         <div className="container">
-          <div className="section-header">
-            <h2>Our Expertise</h2>
-            <p>
-              Led by certified professionals with deep UK education experience
-            </p>
-          </div>
+                      <div className="section-header">
+              <h2>Our Expertise</h2>
+              <p>
+                Led by certified professionals with profound UK education experience
+              </p>
+            </div>
           <div className="expertise-grid">
             <div className="expertise-item">
               <div className="icon">🎓</div>

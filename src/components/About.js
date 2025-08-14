@@ -20,26 +20,18 @@ const About = () => {
                 }}
               />
             </div>
-            <h2>Your Trusted Advisor for British Education</h2>
+            <h2>Your Online Trusted Partner For British Higher Education</h2>
             <p>
-              At UKuniadvisor, we specialize exclusively in guiding students to
+              At UkUniAdviser, we specialize exclusively in guiding students to
               pursue quality education in the United Kingdom — and we've been
               doing it with integrity, experience, and results for over 20
               years.
             </p>
             <p>
-              Founded and led by a British Council Certified Education
-              Counsellor with two postgraduate degrees from the UK — a PGDBM
-              from Cardiff University and an MSc in International Business from
-              the University of Surrey — our consultancy is built on deep
-              personal experience and professional expertise.
+              Founded and led by British Council Certified Counsellors with postgraduate degrees from the UK — including a PGDBM from Cardiff University and an MSc in International Business from the University of Surrey — our consultancy is built on deep personal experience and professional expertise.
             </p>
             <p>
-              Our founder's journey from India to the UK and back gave us a
-              firsthand understanding of the challenges students face when
-              applying, what universities look for, how to settle in the UK as
-              an international student, and how British education can shape a
-              global career.
+              Our Online guidance brings expert counselling to you — at the comfort of your home and time — with a firsthand understanding of the challenges students face when applying, what universities look for, how to settle in the UK as an international student, and how British education can shape a global career.
             </p>
           </div>
           <div className="about-features">
@@ -69,7 +61,7 @@ const About = () => {
             <div className="feature-item">
               <div className="icon">💯</div>
               <h3>100% Free Services</h3>
-              <p>No fees, no confusion - just honest expert guidance</p>
+              <p>No Fees. No Confusion. Just Honest Expert Guidance.</p>
             </div>
           </div>
         </div>

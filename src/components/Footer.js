@@ -27,16 +27,16 @@ const Footer = () => {
           <div className="footer-section footer-brand">
             <div className="footer-logo">
               <h3>
-                UK<span>uni</span>advisor
+                UkUniAdviser
               </h3>
             </div>
             <p className="footer-tagline">
-              Your trusted partner for UK education
+              Your Trusted Online Partner for UK Education
             </p>
             <p className="footer-description">
               Making British higher education accessible, affordable, and
-              achievable for every deserving student through free, personalized,
-              and ethical counseling.
+              achievable for every deserving student through free, Online, personalized,
+              and ethical counselling.
             </p>
 
             {/* Trust Badges */}
@@ -157,7 +157,7 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-bottom-content">
             <p className="copyright">
-              © {currentYear} UKuniadvisor. All rights reserved.
+              © {currentYear} UkUniAdviser. All rights reserved.
             </p>
             <div className="footer-legal">
               <a href="#privacy">Privacy Policy</a>

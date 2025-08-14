@@ -74,7 +74,7 @@ const Services = () => {
       <div className="container">
         <div className="section-header">
           <h2>Our Services</h2>
-          <p>Helping You Study in the UK – Completely Free</p>
+          <p>Helping You Study in the UK – 100% Free, Online, Personalized support</p>
           <div className="underline" />
         </div>
 
@@ -95,11 +95,7 @@ const Services = () => {
 
         <div className="services-intro">
           <p>
-            At UKuniadvisor, we provide 100% free, personalized support to
-            students who want to study in the United Kingdom. Whether you're
-            applying for an undergraduate, postgraduate, or foundation course,
-            our expert guidance simplifies the process and increases your
-            chances of success.
+            At UkUniAdviser, we provide 100% free, Online, personalized support to students who want to study in the United Kingdom. Whether you're applying for an undergraduate, postgraduate, or foundation course, our expert Online guidance simplifies the process and increases your chances of success at the comfort of your home and time.
           </p>
         </div>
 
@@ -130,10 +126,10 @@ const Services = () => {
           <div className="why-free-content">
             <h3>🆓 Why Free?</h3>
             <p>
-              We are funded by partnerships with UK institutions – not by
-              charging students. Our goal is to make UK education accessible to
-              all, regardless of background.
+              Our goal is to make UK education accessible to all, regardless of background.
             </p>
+            <h3>💯 No Hidden Costs</h3>
+            <p>Our services are ABSOLUTELY Free from choosing the university of your choice to Visa and Beyond.</p>
           </div>
         </div>
       </div>
