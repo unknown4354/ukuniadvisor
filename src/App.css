@@ -1,64 +1,146 @@
-/* Root Variables - Light Theme (White & Black Glass) */
+/* Root Variables - Light Theme (UK Flag Theme) */
 :root {
-  --primary-black: #000000;
-  --secondary-black: #1a1a1a;
-  --accent-black: #2d2d2d;
-  --pure-white: #ffffff;
-  --off-white: #f8f9fa;
+  /* Base colors - UK Flag inspired */
+  --uk-red: #c8102e; /* Union Jack Red */
+  --uk-blue: #012169; /* Union Jack Blue */
+  --uk-blue-light: #264796; /* Lighter blue accent */
+  --uk-white: #ffffff; /* Pure white - main color */
+  --uk-off-white: #f8f9fa; /* Slight off-white for variety */
+  
+  /* Primary theme colors - White as main, Red and Blue as accents */
+  --primary-color: var(--uk-white); /* Main white */
+  --secondary-color: var(--uk-red); /* Red accent */
+  --accent-color: var(--uk-blue); /* Blue accent */
+  --accent-light: var(--uk-blue-light); /* Light blue accent */
+  
+  /* Glass and overlay effects */
   --glass-white: rgba(255, 255, 255, 0.25);
-  --glass-black: rgba(0, 0, 0, 0.15);
+  --glass-red: rgba(200, 16, 46, 0.15);
+  --glass-blue: rgba(1, 33, 105, 0.15);
   --glass-white-strong: rgba(255, 255, 255, 0.4);
-  --glass-black-strong: rgba(0, 0, 0, 0.3);
+  --glass-red-strong: rgba(200, 16, 46, 0.3);
+  --glass-blue-strong: rgba(1, 33, 105, 0.3);
   --glass-border: rgba(255, 255, 255, 0.3);
-  --glass-border-dark: rgba(0, 0, 0, 0.3);
-  --text-primary: #000000;
-  --text-secondary: #4a4a4a;
-  --text-light: #6a6a6a;
-  --text-white: #ffffff;
-  --text-muted: rgba(0, 0, 0, 0.6);
+  --glass-border-red: rgba(200, 16, 46, 0.3);
+  --glass-border-blue: rgba(1, 33, 105, 0.3);
+  
+  /* Text colors */
+  --text-primary: var(--uk-blue); /* Dark blue for main text */
+  --text-secondary: #4a4a4a; /* Gray for secondary text */
+  --text-light: #6a6a6a; /* Light gray */
+  --text-white: var(--uk-white); /* White text */
+  --text-red: var(--uk-red); /* Red text for accents */
+  --text-blue: var(--uk-blue); /* Blue text */
+  --text-muted: rgba(1, 33, 105, 0.6); /* Muted blue text */
+  
+  /* Background colors */
+  --bg-primary: var(--uk-white); /* Main white background */
+  --bg-secondary: var(--uk-off-white); /* Off-white background */
+  --bg-red: var(--uk-red); /* Red background for accents */
+  --bg-blue: var(--uk-blue); /* Blue background for accents */
+  --bg-red-light: rgba(200, 16, 46, 0.1); /* Light red background */
+  --bg-blue-light: rgba(1, 33, 105, 0.1); /* Light blue background */
+  
+  /* Shadows and effects */
   --backdrop-blur: blur(20px);
   --backdrop-blur-strong: blur(40px);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  --glass-shadow-strong: 0 12px 40px rgba(0, 0, 0, 0.15);
-  --glass-shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.2);
+  --glass-shadow: 0 8px 32px rgba(1, 33, 105, 0.1);
+  --glass-shadow-strong: 0 12px 40px rgba(1, 33, 105, 0.15);
+  --glass-shadow-hover: 0 16px 48px rgba(1, 33, 105, 0.2);
+  --shadow-red: 0 8px 32px rgba(200, 16, 46, 0.1);
+  --shadow-blue: 0 8px 32px rgba(1, 33, 105, 0.1);
+  
+  /* Transitions */
   --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   --ease-glass: cubic-bezier(0.4, 0, 0.2, 1);
-  /* UK Flag Theme Colors */
-  --primary-color: #c8102e; /* Union Jack Red */
-  --secondary-color: #012169; /* Union Jack Blue */
-  --primary-navy: #012169;
-  --secondary-navy: #0a2c6b;
-  --white: #ffffff;
-  --primary-sage: #012169; /* repurpose to blue for accent consistency */
-  --secondary-sage: #c8102e; /* repurpose to red */
-  --accent-sage: #264796; /* mid blue accent */
-  --success-green: #0b7;
-  --border-color: rgba(0,0,0,0.1);
+  
+  /* Legacy support - maintaining old variable names */
+  --primary-black: var(--text-primary);
+  --secondary-black: #1a1a1a;
+  --accent-black: #2d2d2d;
+  --pure-white: var(--uk-white);
+  --off-white: var(--uk-off-white);
+  --glass-black: var(--glass-blue);
+  --glass-black-strong: var(--glass-blue-strong);
+  --glass-border-dark: var(--glass-border-blue);
+  --border-color: rgba(1, 33, 105, 0.1);
+  --success-green: #22c55e;
+  
+  /* UK Flag specific gradients */
+  --gradient-uk-primary: linear-gradient(135deg, var(--uk-white), var(--uk-off-white));
+  --gradient-uk-accent: linear-gradient(135deg, var(--uk-red), var(--uk-blue));
+  --gradient-uk-red: linear-gradient(135deg, var(--uk-red), #e11d48);
+  --gradient-uk-blue: linear-gradient(135deg, var(--uk-blue), var(--uk-blue-light));
 }
 
-/* Dark Theme Variables */
+/* Dark Theme Variables - Inverted UK Flag Theme */
 .dark {
+  /* Base colors - Dark mode UK Flag inspired */
+  --uk-red: #ff3366; /* Brighter red for dark mode */
+  --uk-blue: #4287f5; /* Brighter blue for dark mode */
+  --uk-blue-light: #6ba3f7; /* Lighter blue accent for dark mode */
+  --uk-white: #1a1a1a; /* Dark background as "white" */
+  --uk-off-white: #2a2a2a; /* Slightly lighter dark for variety */
+  
+  /* Primary theme colors - Dark as main, Bright Red and Blue as accents */
+  --primary-color: var(--uk-white); /* Main dark */
+  --secondary-color: var(--uk-red); /* Bright red accent */
+  --accent-color: var(--uk-blue); /* Bright blue accent */
+  --accent-light: var(--uk-blue-light); /* Light blue accent */
+  
+  /* Glass and overlay effects */
+  --glass-white: rgba(26, 26, 26, 0.25);
+  --glass-red: rgba(255, 51, 102, 0.15);
+  --glass-blue: rgba(66, 135, 245, 0.15);
+  --glass-white-strong: rgba(26, 26, 26, 0.4);
+  --glass-red-strong: rgba(255, 51, 102, 0.3);
+  --glass-blue-strong: rgba(66, 135, 245, 0.3);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-border-red: rgba(255, 51, 102, 0.3);
+  --glass-border-blue: rgba(66, 135, 245, 0.3);
+  
+  /* Text colors */
+  --text-primary: #ffffff; /* White text for main content */
+  --text-secondary: #b5b5b5; /* Gray for secondary text */
+  --text-light: #959595; /* Light gray */
+  --text-white: var(--uk-white); /* Dark text on light backgrounds */
+  --text-red: var(--uk-red); /* Bright red text for accents */
+  --text-blue: var(--uk-blue); /* Bright blue text */
+  --text-muted: rgba(255, 255, 255, 0.6); /* Muted white text */
+  
+  /* Background colors */
+  --bg-primary: var(--uk-white); /* Main dark background */
+  --bg-secondary: var(--uk-off-white); /* Secondary dark background */
+  --bg-red: var(--uk-red); /* Bright red background for accents */
+  --bg-blue: var(--uk-blue); /* Bright blue background for accents */
+  --bg-red-light: rgba(255, 51, 102, 0.1); /* Light red background */
+  --bg-blue-light: rgba(66, 135, 245, 0.1); /* Light blue background */
+  
+  /* Shadows and effects */
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --glass-shadow-strong: 0 12px 40px rgba(0, 0, 0, 0.4);
+  --glass-shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.5);
+  --shadow-red: 0 8px 32px rgba(255, 51, 102, 0.2);
+  --shadow-blue: 0 8px 32px rgba(66, 135, 245, 0.2);
+  
+  /* Legacy support - updating for dark theme */
   --primary-black: #ffffff;
   --secondary-black: #e5e5e5;
   --accent-black: #d2d2d2;
-  --pure-white: #000000;
-  --off-white: #070809;
-  --glass-white: rgba(0, 0, 0, 0.25);
-  --glass-black: rgba(255, 255, 255, 0.15);
-  --glass-white-strong: rgba(0, 0, 0, 0.4);
-  --glass-black-strong: rgba(255, 255, 255, 0.3);
-  --glass-border: rgba(0, 0, 0, 0.3);
-  --glass-border-dark: rgba(255, 255, 255, 0.3);
-  --text-primary: #ffffff;
-  --text-secondary: #b5b5b5;
-  --text-light: #959595;
-  --text-white: #000000;
-  --text-muted: rgba(255, 255, 255, 0.6);
-  --glass-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
-  --glass-shadow-strong: 0 12px 40px rgba(255, 255, 255, 0.15);
-  --glass-shadow-hover: 0 16px 48px rgba(255, 255, 255, 0.2);
+  --pure-white: var(--uk-white);
+  --off-white: var(--uk-off-white);
+  --glass-black: var(--glass-blue);
+  --glass-black-strong: var(--glass-blue-strong);
+  --glass-border-dark: var(--glass-border-blue);
+  --border-color: rgba(255, 255, 255, 0.1);
+  
+  /* UK Flag specific gradients for dark mode */
+  --gradient-uk-primary: linear-gradient(135deg, var(--uk-white), var(--uk-off-white));
+  --gradient-uk-accent: linear-gradient(135deg, var(--uk-red), var(--uk-blue));
+  --gradient-uk-red: linear-gradient(135deg, var(--uk-red), #ff1a5c);
+  --gradient-uk-blue: linear-gradient(135deg, var(--uk-blue), var(--uk-blue-light));
 }
 
 /* Reset and Base Styles */
@@ -228,37 +310,42 @@ section::before {
 }
 
 .btn-primary {
-  background: var(--glass-black-strong);
-  color: var(--text-white);
-  border: 1px solid var(--glass-border-dark);
+  background: var(--gradient-uk-accent);
+  color: var(--uk-white);
+  border: 2px solid var(--uk-red);
   backdrop-filter: var(--backdrop-blur);
-  box-shadow: var(--glass-shadow);
+  box-shadow: var(--shadow-red);
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary:hover {
-  background: var(--primary-black);
+  background: var(--uk-red);
   transform: translateY(-2px);
   box-shadow: var(--glass-shadow-hover);
   backdrop-filter: var(--backdrop-blur-strong);
+  border-color: var(--uk-blue);
 }
 
 .btn-secondary {
-  background: var(--glass-white-strong);
-  color: var(--primary-black);
-  border: 1px solid var(--glass-border);
+  background: var(--uk-white);
+  color: var(--uk-blue);
+  border: 2px solid var(--uk-blue);
   backdrop-filter: var(--backdrop-blur);
-  box-shadow: var(--glass-shadow);
+  box-shadow: var(--shadow-blue);
+  font-weight: 600;
 }
 
 .btn-secondary:hover {
-  background: var(--primary-navy);
-  color: var(--white);
+  background: var(--bg-blue-light);
+  color: var(--uk-red);
   transform: translateY(-2px);
-  box-shadow: var(--shadow);
+  box-shadow: var(--glass-shadow-hover);
+  border-color: var(--uk-red);
 }
 
 .btn-sage {
-  background: var(--primary-sage);
+  background: var(--uk-red);
   color: var(--white);
   box-shadow: var(--shadow);
 }
@@ -280,12 +367,13 @@ section::before {
   -webkit-backdrop-filter: var(--backdrop-blur);
   z-index: 1000;
   transition: var(--transition);
-  border-bottom: 1px solid var(--glass-border);
+  border-bottom: 2px solid var(--uk-red);
 }
 
 .navbar.scrolled {
   background: var(--glass-white-strong);
-  box-shadow: var(--glass-shadow);
+  box-shadow: var(--shadow-blue);
+  border-bottom-color: var(--uk-blue);
 }
 
 .navbar-container {
@@ -300,17 +388,17 @@ section::before {
 .navbar-logo {
   font-size: 1.8rem;
   font-weight: 800;
-  color: var(--primary-navy);
+  color: var(--uk-blue);
   text-decoration: none;
   transition: var(--transition);
 }
 
 .navbar-logo:hover {
-  color: var(--accent-navy);
+  color: var(--uk-red);
 }
 
 .navbar-logo span {
-  color: var(--primary-sage);
+  color: var(--uk-red);
 }
 
 .navbar-nav {
@@ -330,7 +418,7 @@ section::before {
 }
 
 .navbar-nav a:hover {
-  color: var(--primary-navy);
+  color: var(--uk-red);
 }
 
 .navbar-nav a::after {
@@ -340,13 +428,14 @@ section::before {
   left: 50%;
   width: 0;
   height: 2px;
-  background: var(--primary-sage);
+  background: var(--uk-red);
   transition: var(--transition);
   transform: translateX(-50%);
 }
 
 .navbar-nav a:hover::after {
   width: 100%;
+  background: var(--uk-blue);
 }
 
 .navbar-nav .btn-primary {
@@ -355,25 +444,26 @@ section::before {
 
 /* Enhanced navbar CTA button */
 .navbar-nav .navbar-cta {
-  background: linear-gradient(135deg, var(--glass-black-strong), rgba(0, 0, 0, 0.4));
-  color: var(--text-white) !important;
-  border: 1px solid var(--glass-border-dark);
+  background: var(--gradient-uk-accent);
+  color: var(--uk-white) !important;
+  border: 2px solid var(--uk-red);
   backdrop-filter: var(--backdrop-blur);
   padding: 12px 24px;
   border-radius: 25px;
   font-weight: 600;
   text-decoration: none;
   transition: var(--transition);
-  box-shadow: var(--glass-shadow);
+  box-shadow: var(--shadow-red);
   margin-left: 20px;
 }
 
 .navbar-nav .navbar-cta:hover {
-  background: linear-gradient(135deg, var(--primary-black), rgba(0, 0, 0, 0.8));
+  background: var(--uk-red);
   transform: translateY(-2px);
   box-shadow: var(--glass-shadow-hover);
   backdrop-filter: var(--backdrop-blur-strong);
-  color: var(--pure-white) !important;
+  color: var(--uk-white) !important;
+  border-color: var(--uk-blue);
 }
 
 /* Dark mode specific navbar CTA button styling */
@@ -514,7 +604,7 @@ section::before {
 }
 
 .hero-image > div {
-  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-navy) 50%, var(--primary-sage) 100%) !important;
+  background: linear-gradient(135deg, var(--uk-blue) 0%, var(--uk-blue-light) 50%, var(--uk-red) 100%) !important;
   animation: subtleFloat 4s ease-in-out infinite;
   transition: var(--transition);
   border-radius: 16px;
@@ -731,7 +821,7 @@ section::before {
 }
 
 .service-features li:hover {
-  color: var(--primary-navy);
+  color: var(--uk-blue);
   transform: translateX(2px);
 }
 
@@ -826,14 +916,14 @@ section::before {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
   background: var(--white);
-  border-color: var(--primary-sage);
+  border-color: var(--uk-red);
 }
 
 .trust-icon {
   font-size: 3rem;
   margin-bottom: 24px;
   display: block;
-  color: var(--primary-sage);
+  color: var(--uk-red);
   transition: var(--transition);
 }
 
@@ -845,7 +935,7 @@ section::before {
 .trust-card h3 {
   font-size: 1.4rem;
   font-weight: 600;
-  color: var(--primary-navy);
+  color: var(--uk-blue);
   margin-bottom: 16px;
 }
 
@@ -856,7 +946,7 @@ section::before {
 }
 
 .mission-statement {
-  background: linear-gradient(135deg, var(--primary-sage), var(--secondary-sage));
+  background: linear-gradient(135deg, var(--uk-red), var(--secondary-sage));
   border-radius: 16px;
   padding: 60px 40px;
   text-align: center;
@@ -929,7 +1019,7 @@ section::before {
 }
 
 .availability-section h3 {
-  color: var(--primary-navy);
+  color: var(--uk-blue);
   font-size: 1.8rem;
   margin-bottom: 20px;
   text-align: center;
@@ -963,11 +1053,11 @@ section::before {
   transform: translateY(-3px);
   box-shadow: var(--shadow);
   background: var(--white);
-  border-color: var(--primary-sage);
+  border-color: var(--uk-red);
 }
 
 .availability-item h4 {
-  color: var(--primary-navy);
+  color: var(--uk-blue);
   font-size: 1.3rem;
   margin-bottom: 16px;
   font-weight: 600;
@@ -981,7 +1071,7 @@ section::before {
 
 .video-note {
   text-align: center;
-  color: var(--primary-sage);
+  color: var(--uk-red);
   font-weight: 600;
   font-size: 1.1rem;
 }
@@ -992,7 +1082,7 @@ section::before {
 }
 
 .steps-section h3 {
-  color: var(--primary-navy);
+  color: var(--uk-blue);
   font-size: 1.8rem;
   margin-bottom: 60px;
   text-align: center;
@@ -1020,11 +1110,11 @@ section::before {
 .step-item:hover {
   transform: translateX(8px);
   box-shadow: var(--shadow-lg);
-  border-color: var(--primary-sage);
+  border-color: var(--uk-red);
 }
 
 .step-number {
-  background: var(--primary-navy);
+  background: var(--uk-blue);
   color: var(--white);
   width: 80px;
   height: 80px;
@@ -1039,7 +1129,7 @@ section::before {
 }
 
 .step-item:hover .step-number {
-  background: var(--primary-sage);
+  background: var(--uk-red);
   transform: scale(1.05);
 }
 
@@ -1051,7 +1141,7 @@ section::before {
 
 .step-icon {
   font-size: 2.5rem;
-  color: var(--primary-sage);
+  color: var(--uk-red);
   transition: var(--transition);
 }
 
@@ -1065,7 +1155,7 @@ section::before {
 }
 
 .step-content h4 {
-  color: var(--primary-navy);
+  color: var(--uk-blue);
   font-size: 1.4rem;
   margin-bottom: 12px;
   font-weight: 600;
@@ -1221,7 +1311,7 @@ section::before {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary-sage), var(--secondary-sage));
+  background: linear-gradient(135deg, var(--uk-red), var(--secondary-sage));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1238,7 +1328,7 @@ section::before {
 }
 
 .student-info h4 {
-  color: var(--primary-navy);
+  color: var(--uk-blue);
   font-size: 1.4rem;
   margin-bottom: 6px;
   font-weight: 700;
@@ -1252,7 +1342,7 @@ section::before {
 }
 
 .student-info .university {
-  color: var(--primary-sage);
+  color: var(--uk-red);
   font-weight: 600;
   font-size: 1rem;
 }
@@ -1298,7 +1388,7 @@ section::before {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 32px;
-  background: linear-gradient(135deg, var(--primary-navy), var(--secondary-navy));
+  background: linear-gradient(135deg, var(--uk-blue), var(--uk-blue-light));
   padding: 60px 40px;
   border-radius: 16px;
   position: relative;
@@ -1362,7 +1452,7 @@ section::before {
 }
 
 .form-info h3 {
-  color: var(--primary-navy);
+  color: var(--uk-blue);
   font-size: 1.8rem;
   margin-bottom: 24px;
   font-weight: 700;
@@ -1390,7 +1480,7 @@ section::before {
 }
 
 .form-info li:hover {
-  color: var(--primary-navy);
+  color: var(--uk-blue);
   transform: translateX(2px);
 }
 
@@ -1413,7 +1503,7 @@ section::before {
 }
 
 .consultation-types h4 {
-  color: var(--primary-navy);
+  color: var(--uk-blue);
   font-size: 1.4rem;
   margin-bottom: 24px;
   font-weight: 700;
@@ -1436,11 +1526,11 @@ section::before {
   transform: translateY(-2px);
   box-shadow: var(--shadow);
   background: var(--white);
-  border-color: var(--primary-sage);
+  border-color: var(--uk-red);
 }
 
 .option-item strong {
-  color: var(--primary-navy);
+  color: var(--uk-blue);
   font-size: 1.2rem;
   display: block;
   margin-bottom: 8px;
@@ -1474,13 +1564,13 @@ section::before {
   left: 0;
   right: 0;
   height: 6px;
-  background: linear-gradient(90deg, var(--primary-sage), var(--secondary-sage));
+  background: linear-gradient(90deg, var(--uk-red), var(--secondary-sage));
   background-size: 200% 100%;
   animation: gentleGradient 3s ease-in-out infinite;
 }
 
 .booking-form h3 {
-  color: var(--primary-navy);
+  color: var(--uk-blue);
   font-size: 1.8rem;
   margin-bottom: 32px;
   text-align: center;
@@ -1493,7 +1583,7 @@ section::before {
 }
 
 .form-group label {
-  color: var(--primary-navy);
+  color: var(--uk-blue);
   font-weight: 700;
   margin-bottom: 8px;
   font-size: 1.1rem;
@@ -1504,27 +1594,27 @@ section::before {
 .form-group textarea {
   width: 100%;
   padding: 16px 20px;
-  border: 2px solid rgba(0, 0, 0, 0.3);
+  border: 2px solid var(--uk-blue);
   border-radius: 8px;
   font-size: 1rem;
   font-family: 'Poppins', sans-serif;
   transition: var(--transition);
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--uk-white);
   backdrop-filter: blur(10px);
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-blue);
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: rgba(0, 0, 0, 0.8);
-  background: rgba(255, 255, 255, 0.95);
+  border-color: var(--uk-red);
+  background: var(--uk-white);
   backdrop-filter: blur(15px);
   box-shadow: 
-    inset 0 2px 4px rgba(0, 0, 0, 0.15),
-    0 0 0 4px rgba(0, 0, 0, 0.1),
-    0 8px 25px rgba(0, 0, 0, 0.15);
+    var(--shadow-red),
+    0 0 0 4px rgba(200, 16, 46, 0.1),
+    0 8px 25px rgba(200, 16, 46, 0.15);
   transform: translateY(-2px);
 }
 
@@ -1657,7 +1747,7 @@ section::before {
 }
 
 .thank-you-content h2 {
-  color: var(--primary-navy);
+  color: var(--uk-blue);
   font-size: 2.5rem;
   margin-bottom: 24px;
   font-weight: 800;
@@ -1671,7 +1761,7 @@ section::before {
 }
 
 .success-details {
-  background: linear-gradient(135deg, var(--primary-sage), var(--secondary-sage));
+  background: linear-gradient(135deg, var(--uk-red), var(--secondary-sage));
   padding: 40px;
   border-radius: 16px;
   margin-bottom: 40px;
@@ -1693,14 +1783,14 @@ section::before {
 
 /* Modern Footer Design */
 .footer {
-  background: rgba(248, 249, 250, 0.15);
+  background: var(--glass-white);
   backdrop-filter: blur(8px);
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 3px solid var(--uk-blue);
   color: var(--text-primary);
   padding: 60px 0 30px;
   position: relative;
   margin-top: 80px;
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-blue);
 }
 
 .footer::before {
@@ -2096,13 +2186,13 @@ section::before {
 }
 
 .footer-legal a:hover {
-  color: var(--primary-sage);
+  color: var(--uk-red);
   background: rgba(255, 255, 255, 0.05);
 }
 
 /* Enhanced Back to Top */
 .back-to-top {
-  background: linear-gradient(135deg, var(--primary-sage), var(--secondary-sage));
+  background: linear-gradient(135deg, var(--uk-red), var(--secondary-sage));
   color: var(--white);
   border: none;
   width: 56px;
@@ -2131,7 +2221,7 @@ section::before {
 }
 
 .back-to-top:hover {
-  background: linear-gradient(135deg, var(--secondary-sage), var(--primary-sage));
+  background: linear-gradient(135deg, var(--secondary-sage), var(--uk-red));
   transform: translateY(-2px) scale(1.1);
   box-shadow: var(--shadow-xl);
 }
@@ -2151,7 +2241,7 @@ input:focus,
 select:focus,
 textarea:focus,
 a:focus {
-  outline: 3px solid var(--primary-sage);
+  outline: 3px solid var(--uk-red);
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -2352,8 +2442,8 @@ a:focus {
   }
 
   .navbar-nav a:not(.navbar-cta):hover {
-    color: var(--primary-sage) !important;
-    border-bottom-color: var(--primary-sage) !important;
+    color: var(--uk-red) !important;
+    border-bottom-color: var(--uk-red) !important;
     background: rgba(30, 58, 138, 0.1) !important;
     transform: translateY(-2px) !important;
   }
@@ -2398,18 +2488,18 @@ a:focus {
   }
 
   .dark .navbar-nav a:hover {
-    color: var(--primary-sage);
+    color: var(--uk-red);
     background: rgba(255, 255, 255, 0.1);
   }
 
   .dark .navbar-nav .navbar-cta {
-    background: linear-gradient(135deg, var(--primary-sage), var(--accent-sage));
+    background: linear-gradient(135deg, var(--uk-red), var(--uk-blue-light));
     color: var(--primary-black) !important;
-    border: 1px solid var(--primary-sage);
+    border: 1px solid var(--uk-red);
   }
 
   .dark .navbar-nav .navbar-cta:hover {
-    background: linear-gradient(135deg, var(--accent-sage), var(--primary-sage));
+    background: linear-gradient(135deg, var(--uk-blue-light), var(--uk-red));
     transform: translateY(-2px);
     box-shadow: 0 6px 25px rgba(139, 184, 139, 0.4);
   }
@@ -2532,9 +2622,9 @@ a:focus {
   }
 
   .dark .navbar-nav a:not(.navbar-cta):hover {
-    color: var(--primary-sage) !important;
+    color: var(--uk-red) !important;
     background: rgba(255, 255, 255, 0.1) !important;
-    border-bottom-color: var(--primary-sage) !important;
+    border-bottom-color: var(--uk-red) !important;
   }
 
   /* Specific styling for Services link in dark theme */
@@ -2543,51 +2633,57 @@ a:focus {
   }
 
   .dark .navbar-nav a[href="#services"]:hover {
-    color: var(--primary-sage) !important;
+    color: var(--uk-red) !important;
   }
 
   /* Specific styling for CTA button text in dark theme mobile */
   .dark .navbar-nav .btn.btn-primary.navbar-cta {
-    color: #000000 !important;
+    color: var(--uk-white) !important;
     text-shadow: none !important;
-    border: 2px solid #000000 !important;
+    border: 2px solid var(--uk-red) !important;
+    background: var(--gradient-uk-accent) !important;
   }
 
   .dark .navbar-nav .btn.btn-primary.navbar-cta:hover {
-    color: #000000 !important;
+    color: var(--uk-white) !important;
     text-shadow: none !important;
-    border: 2px solid #000000 !important;
+    border: 2px solid var(--uk-blue) !important;
+    background: var(--uk-red) !important;
   }
 
   .dark .navbar-nav li .navbar-cta {
-    color: #000000 !important;
-    border: 2px solid #000000 !important;
+    color: var(--uk-white) !important;
+    border: 2px solid var(--uk-red) !important;
+    background: var(--gradient-uk-accent) !important;
   }
 
   .dark .navbar-nav li .navbar-cta:hover {
-    color: #000000 !important;
-    border: 2px solid #000000 !important;
+    color: var(--uk-white) !important;
+    border: 2px solid var(--uk-blue) !important;
+    background: var(--uk-red) !important;
   }
 
   /* Ultra-specific rule for consultation button */
   .dark .navbar-nav a[href="#consultation"] {
-    color: #000000 !important;
-    border: 2px solid #000000 !important;
+    color: var(--uk-white) !important;
+    border: 2px solid var(--uk-red) !important;
+    background: var(--gradient-uk-accent) !important;
   }
 
   .dark .navbar-nav a[href="#consultation"]:hover {
-    color: #000000 !important;
-    border: 2px solid #000000 !important;
+    color: var(--uk-white) !important;
+    border: 2px solid var(--uk-blue) !important;
+    background: var(--uk-red) !important;
   }
 
   .dark .navbar-nav .navbar-cta {
-    background: linear-gradient(135deg, var(--primary-sage), var(--accent-sage));
+    background: linear-gradient(135deg, var(--uk-red), var(--uk-blue-light));
     color: var(--primary-black) !important;
-    border: 1px solid var(--primary-sage);
+    border: 1px solid var(--uk-red);
   }
 
   .dark .navbar-nav .navbar-cta:hover {
-    background: linear-gradient(135deg, var(--accent-sage), var(--primary-sage));
+    background: linear-gradient(135deg, var(--uk-blue-light), var(--uk-red));
     transform: translateY(-2px);
     box-shadow: 0 6px 25px rgba(139, 184, 139, 0.4);
   }
@@ -2730,77 +2826,80 @@ a:focus {
 
 /* Theme Toggle Styles */
 .theme-toggle {
-  background: none;
-  border: none;
+  background: var(--bg-primary);
+  border: 2px solid var(--uk-blue);
   cursor: pointer;
-  padding: 8px;
+  padding: 6px;
   border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: var(--transition);
   position: relative;
-  width: 56px;
-  height: 28px;
+  width: 64px;
+  height: 32px;
+  box-shadow: var(--shadow-blue);
 }
 
 .theme-toggle:hover {
-  background: var(--glass-white);
+  background: var(--bg-blue-light);
+  border-color: var(--uk-red);
+  box-shadow: var(--shadow-red);
   backdrop-filter: var(--backdrop-blur);
 }
 
 .theme-toggle-track {
-  width: 48px;
-  height: 24px;
-  background: var(--glass-black-strong);
-  border-radius: 12px;
+  width: 52px;
+  height: 20px;
+  background: var(--gradient-uk-primary);
+  border-radius: 10px;
   position: relative;
   transition: var(--transition);
-  border: 1px solid var(--glass-border-dark);
+  border: 1px solid var(--uk-blue);
   backdrop-filter: var(--backdrop-blur);
 }
 
 .dark .theme-toggle-track {
-  background: var(--glass-white-strong);
-  border: 1px solid var(--glass-border);
+  background: var(--gradient-uk-primary);
+  border: 1px solid var(--uk-red);
 }
 
 .theme-toggle-thumb {
-  width: 20px;
-  height: 20px;
-  background: var(--pure-white);
+  width: 18px;
+  height: 18px;
+  background: var(--gradient-uk-red);
   border-radius: 50%;
   position: absolute;
-  top: 2px;
-  left: 2px;
+  top: 1px;
+  left: 1px;
   transition: var(--transition);
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: var(--glass-shadow);
-  border: 1px solid var(--glass-border-dark);
+  border: 1px solid var(--uk-white);
 }
 
 .dark .theme-toggle-thumb {
-  background: var(--primary-black);
-  transform: translateX(24px);
-  border: 1px solid var(--glass-border);
+  background: var(--gradient-uk-blue);
+  transform: translateX(32px);
+  border: 1px solid var(--text-primary);
   box-shadow: var(--glass-shadow);
 }
 
 .theme-icon {
   width: 12px;
   height: 12px;
-  color: var(--text-secondary);
+  color: var(--uk-white);
   transition: var(--transition);
 }
 
 .theme-icon.sun {
-  color: #ffa500;
+  color: var(--uk-white);
 }
 
 .theme-icon.moon {
-  color: #4169e1;
+  color: var(--uk-white);
 }
 
 .theme-toggle-nav {
@@ -2854,11 +2953,12 @@ main {
 
 /* Page Header Styles */
 .page-header {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: white;
+  background: var(--gradient-uk-accent);
+  color: var(--uk-white);
   padding: 120px 0 80px;
   text-align: center;
   margin-top: 70px; /* Account for fixed navbar */
+  box-shadow: 0 4px 20px rgba(1, 33, 105, 0.2);
 }
 
 .page-header h1 {
@@ -2982,9 +3082,10 @@ main {
 
 .home-cta {
   padding: 80px 0;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: white;
+  background: var(--gradient-uk-accent);
+  color: var(--uk-white);
   text-align: center;
+  box-shadow: 0 4px 20px rgba(1, 33, 105, 0.15);
 }
 
 .cta-content h2 {
@@ -3311,9 +3412,10 @@ main {
 
 .stories-cta {
   padding: 80px 0;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: white;
+  background: var(--gradient-uk-accent);
+  color: var(--uk-white);
   text-align: center;
+  box-shadow: 0 4px 20px rgba(1, 33, 105, 0.15);
 }
 
 /* Contact Page Styles */
