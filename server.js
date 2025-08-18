@@ -33,8 +33,6 @@ app.post("/api/book-consultation", async (req, res) => {
       "email",
       "phone",
       "preferredContactMethod",
-      "preferredDate",
-      "preferredTime",
       "areaOfInterest"
     ];
     for (const field of requiredFields) {
@@ -44,40 +42,117 @@ app.post("/api/book-consultation", async (req, res) => {
     }
 
     // Prepare email content
-    const toEmail = "contact@ukuniadviser.com";
-    const subject = `New Consultation Booking: ${formData.name} — ${formData.areaOfInterest}`;
+    const toEmail = process.env.EMAIL_TO || "contact@ukuniadviser.com";
+    const subject = `🎓 New Consultation Request: ${formData.name} — ${formData.areaOfInterest}`;
 
     const html = `
-      <div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#111">
-        <h2 style="margin:0 0 12px">New Consultation Booking</h2>
-        <p style="margin:4px 0">A new consultation has been booked via the website. Details are below:</p>
-        <hr style="border:none;border-top:1px solid #e5e7eb;margin:12px 0" />
-        <table style="width:100%;max-width:640px;border-collapse:collapse">
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>New Consultation Booking - UkUniAdviser</title>
+      </head>
+      <body style="margin:0;padding:20px;background-color:#f8f9fa;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif">
+        <div style="max-width:600px;margin:0 auto;background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.1)">
+          
+          <!-- Header -->
+          <div style="background:linear-gradient(135deg,#c8102e,#012169);padding:30px 40px;text-align:center">
+            <h1 style="margin:0;color:#ffffff;font-size:24px;font-weight:700">🎓 UkUniAdviser</h1>
+            <p style="margin:8px 0 0;color:rgba(255,255,255,0.9);font-size:16px">New Consultation Booking</p>
+          </div>
+          
+          <!-- Content -->
+          <div style="padding:40px">
+            <div style="background:#f8f9fa;border-left:4px solid #c8102e;padding:20px;margin-bottom:30px;border-radius:6px">
+              <h2 style="margin:0 0 8px;color:#012169;font-size:18px">📞 New Student Consultation Request</h2>
+              <p style="margin:0;color:#6c757d;font-size:14px">Submitted on ${new Date().toLocaleString(
+                "en-GB",
+                {
+                  timeZone: "Asia/Kolkata",
+                  dateStyle: "full",
+                  timeStyle: "short"
+                }
+              )} (IST)</p>
+            </div>
+            
+            <table style="width:100%;border-collapse:collapse;margin-bottom:30px">
           <tbody>
-            <tr><td style="padding:6px 0;width:220px;color:#555">Full Name</td><td style="padding:6px 0;font-weight:600">${formData.name}</td></tr>
-            <tr><td style="padding:6px 0;color:#555">Email</td><td style="padding:6px 0">${formData.email}</td></tr>
-            <tr><td style="padding:6px 0;color:#555">Phone</td><td style="padding:6px 0">${formData.phone}</td></tr>
-            <tr><td style="padding:6px 0;color:#555">Preferred Contact Method</td><td style="padding:6px 0">${formData.preferredContactMethod}</td></tr>
-            <tr><td style="padding:6px 0;color:#555">Preferred Date</td><td style="padding:6px 0">${formData.preferredDate}</td></tr>
-            <tr><td style="padding:6px 0;color:#555">Preferred Time</td><td style="padding:6px 0">${formData.preferredTime}</td></tr>
-            <tr><td style="padding:6px 0;color:#555">Area of Interest</td><td style="padding:6px 0">${formData.areaOfInterest}</td></tr>
-            ${formData.message ? `<tr><td style="padding:6px 0;color:#555">Additional Message</td><td style="padding:6px 0">${formData.message}</td></tr>` : ""}
+                <tr style="border-bottom:1px solid #e9ecef">
+                  <td style="padding:12px 0;width:40%;color:#6c757d;font-weight:600;font-size:14px">👤 Full Name</td>
+                  <td style="padding:12px 0;color:#212529;font-weight:600;font-size:15px">${formData.name}</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e9ecef">
+                  <td style="padding:12px 0;color:#6c757d;font-weight:600;font-size:14px">📧 Email Address</td>
+                  <td style="padding:12px 0;color:#212529;font-size:15px"><a href="mailto:${formData.email}" style="color:#c8102e;text-decoration:none">${formData.email}</a></td>
+                </tr>
+                <tr style="border-bottom:1px solid #e9ecef">
+                  <td style="padding:12px 0;color:#6c757d;font-weight:600;font-size:14px">📱 Phone Number</td>
+                  <td style="padding:12px 0;color:#212529;font-size:15px"><a href="tel:${formData.phone}" style="color:#c8102e;text-decoration:none">${formData.phone}</a></td>
+                </tr>
+                <tr style="border-bottom:1px solid #e9ecef">
+                  <td style="padding:12px 0;color:#6c757d;font-weight:600;font-size:14px">💬 Preferred Contact</td>
+                  <td style="padding:12px 0;color:#212529;font-size:15px">${formData.preferredContactMethod}</td>
+                </tr>
+
+                <tr style="border-bottom:1px solid #e9ecef">
+                  <td style="padding:12px 0;color:#6c757d;font-weight:600;font-size:14px">🎯 Area of Interest</td>
+                  <td style="padding:12px 0;color:#012169;font-weight:700;font-size:15px">${formData.areaOfInterest}</td>
+                </tr>
+                ${formData.message
+                  ? `
+                <tr>
+                  <td style="padding:12px 0;color:#6c757d;font-weight:600;font-size:14px;vertical-align:top">💭 Additional Message</td>
+                  <td style="padding:12px 0;color:#212529;font-size:15px;line-height:1.5">${formData.message}</td>
+                </tr>
+                `
+                  : ""}
           </tbody>
         </table>
-        <hr style="border:none;border-top:1px solid #e5e7eb;margin:12px 0" />
-        <p style="margin:4px 0;color:#555">This notification was sent automatically by UkUniAdviser website.</p>
+            
+            <!-- Action Required -->
+            <div style="background:linear-gradient(135deg,#012169,#264796);color:#ffffff;padding:20px;border-radius:8px;text-align:center;margin-bottom:20px">
+              <h3 style="margin:0 0 8px;font-size:16px">⚡ Action Required</h3>
+              <p style="margin:0;font-size:14px;opacity:0.9">Please contact the student within 24 hours to confirm their consultation appointment.</p>
+            </div>
+          </div>
+          
+          <!-- Footer -->
+          <div style="background:#f8f9fa;padding:20px 40px;text-align:center;border-top:1px solid #e9ecef">
+            <p style="margin:0;color:#6c757d;font-size:13px">
+              📧 This notification was sent automatically by the UkUniAdviser website.<br>
+              🌐 Visit: <a href="https://ukuniadviser.com" style="color:#c8102e;text-decoration:none">ukuniadviser.com</a>
+            </p>
+          </div>
       </div>
+      </body>
+      </html>
     `;
 
-    const text = `New Consultation Booking\n\n` +
-      `Full Name: ${formData.name}\n` +
-      `Email: ${formData.email}\n` +
-      `Phone: ${formData.phone}\n` +
-      `Preferred Contact Method: ${formData.preferredContactMethod}\n` +
-      `Preferred Date: ${formData.preferredDate}\n` +
-      `Preferred Time: ${formData.preferredTime}\n` +
-      `Area of Interest: ${formData.areaOfInterest}\n` +
-      (formData.message ? `Message: ${formData.message}\n` : ``);
+    const text = `🎓 UkUniAdviser - New Consultation Request
+    
+Student Details:
+================
+Full Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+
+Consultation Preferences:
+========================
+Contact Method: ${formData.preferredContactMethod}
+Area of Interest: ${formData.areaOfInterest}
+${formData.message ? `\nAdditional Message:\n${formData.message}\n` : ""}
+
+Submitted: ${new Date().toLocaleString("en-GB", {
+      timeZone: "Asia/Kolkata",
+      dateStyle: "full",
+      timeStyle: "short"
+    })} (IST)
+
+⚡ Action Required: Please contact the student within 24 hours to schedule their consultation.
+
+---
+This notification was sent automatically by UkUniAdviser website.`;
 
     // Send email
     await transporter.sendMail({
@@ -93,12 +168,12 @@ app.post("/api/book-consultation", async (req, res) => {
     });
 
     // Also log for audit
-    console.log("New consultation booking:", formData);
+    console.log("New consultation request:", formData);
 
     // Success response
     res.status(200).json({
       success: true,
-      message: "Consultation booked successfully",
+      message: "Consultation request submitted successfully",
       eventId: `event_${Date.now()}`
     });
   } catch (error) {
@@ -151,7 +226,9 @@ app.listen(PORT, () => {
   console.log("2. Configure email settings");
   console.log("3. Update environment variables");
   console.log("");
-  console.log("ℹ️  For now, the server will log bookings to console and send notification emails (if EMAIL_USER/PASS are configured).");
+  console.log(
+    "ℹ️  For now, the server will log bookings to console and send notification emails (if EMAIL_USER/PASS are configured)."
+  );
 });
 
 module.exports = app;

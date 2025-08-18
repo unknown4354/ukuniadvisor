@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
+import UKFlagIcon from "./UKFlagIcon";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,15 +30,34 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
+    <nav
+      id="navigation"
+      className={`navbar ${isScrolled ? "scrolled" : ""}`}
+      role="navigation"
+      aria-label="Main navigation"
+    >
       <div className="navbar-container">
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-          UkUniAdviser
+          <UKFlagIcon width={28} height={21} className="navbar-flag-icon" />
+          <span className="navbar-logo-text">UkUniAdviser</span>
         </Link>
 
         <ul
+          id="navbar-menu"
           className={`navbar-nav ${isMobileMenuOpen ? "mobile-menu-open" : ""}`}
+          role="menu"
         >
+          <li>
+            <Link
+              to="/success-stories"
+              className={`success-stories-nav ${isActivePage("/success-stories")
+                ? "active"
+                : ""}`}
+              onClick={closeMobileMenu}
+            >
+              🌟 Success Stories
+            </Link>
+          </li>
           <li>
             <Link
               to="/about"
@@ -67,11 +87,11 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to="/success-stories"
-              className={isActivePage("/success-stories") ? "active" : ""}
+              to="/referrals"
+              className={isActivePage("/referrals") ? "active" : ""}
               onClick={closeMobileMenu}
             >
-              Success Stories
+              Referrals
             </Link>
           </li>
           <li className="theme-toggle-nav">
@@ -90,14 +110,17 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <div
+        <button
           className={`navbar-toggle ${isMobileMenuOpen ? "active" : ""}`}
           onClick={toggleMobileMenu}
+          aria-label="Toggle mobile menu"
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="navbar-menu"
         >
           <span />
           <span />
           <span />
-        </div>
+        </button>
       </div>
 
       {/* Mobile Menu Overlay */}

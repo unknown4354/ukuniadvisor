@@ -37,6 +37,34 @@ const SuccessStories = () => {
 
   return (
     <div className="success-stories-page">
+      {/* Success Stories Hero Section */}
+      <section className="success-stories-hero">
+        <div className="container">
+          <div className="success-hero-content">
+            <h1>🌟 Success Stories</h1>
+            <p>
+              Discover how over 500+ students have achieved their UK education
+              dreams with our free, expert guidance. Each story represents a
+              unique journey to success in the United Kingdom.
+            </p>
+            <div className="hero-stats">
+              <div className="hero-stat">
+                <span className="hero-stat-number">500+</span>
+                <span className="hero-stat-label">Success Stories</span>
+              </div>
+              <div className="hero-stat">
+                <span className="hero-stat-number">99%</span>
+                <span className="hero-stat-label">Success Rate</span>
+              </div>
+              <div className="hero-stat">
+                <span className="hero-stat-number">50+</span>
+                <span className="hero-stat-label">UK Universities</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Testimonials />
 
       {/* Additional Success Stories */}
@@ -45,7 +73,8 @@ const SuccessStories = () => {
           <div className="section-header">
             <h2>More Success Stories</h2>
             <p>
-              Every student's journey is unique, but the destination is the same: success.
+              Every student's journey is unique, but the destination is the
+              same: success.
             </p>
           </div>
 
@@ -63,7 +92,10 @@ const SuccessStories = () => {
                     <p className="university">
                       {story.university}
                     </p>
-                    {story.year && <span className="year">{story.year}</span>}
+                    {story.year &&
+                      <span className="year">
+                        {story.year}
+                      </span>}
                   </div>
                 </div>
                 <div className="story-content">
@@ -88,8 +120,8 @@ const SuccessStories = () => {
               <div className="detail">Across 50+ UK Universities</div>
             </div>
             <div className="number-card">
-                    <div className="number">99%</div>
-      <div className="label">Success Rate</div>
+              <div className="number">99%</div>
+              <div className="label">Success Rate</div>
               <div className="detail">Above industry average</div>
             </div>
             <div className="number-card">

@@ -6,8 +6,6 @@ const ConsultationForm = () => {
     email: "",
     phone: "",
     preferredContactMethod: "",
-    preferredDate: "",
-    preferredTime: "",
     areaOfInterest: "",
     message: ""
   });
@@ -27,16 +25,7 @@ const ConsultationForm = () => {
     "General Inquiry"
   ];
 
-  const timeSlots = [
-    "09:00 AM - 10:00 AM",
-    "10:00 AM - 11:00 AM",
-    "11:00 AM - 12:00 PM",
-    "02:00 PM - 03:00 PM",
-    "03:00 PM - 04:00 PM",
-    "04:00 PM - 05:00 PM",
-    "05:00 PM - 06:00 PM",
-    "07:00 PM - 08:00 PM"
-  ];
+
 
   const handleInputChange = e => {
     const { name, value } = e.target;
@@ -74,14 +63,6 @@ const ConsultationForm = () => {
       newErrors.preferredContactMethod = "Preferred contact method is required";
     }
 
-    if (!formData.preferredDate) {
-      newErrors.preferredDate = "Preferred date is required";
-    }
-
-    if (!formData.preferredTime) {
-      newErrors.preferredTime = "Preferred time is required";
-    }
-
     if (!formData.areaOfInterest) {
       newErrors.areaOfInterest = "Area of interest is required";
     }
@@ -116,8 +97,6 @@ const ConsultationForm = () => {
           email: "",
           phone: "",
           preferredContactMethod: "",
-          preferredDate: "",
-          preferredTime: "",
           areaOfInterest: "",
           message: ""
         });
@@ -132,11 +111,7 @@ const ConsultationForm = () => {
     }
   };
 
-  const getTomorrowDate = () => {
-    const tomorrow = new Date();
-    tomorrow.setDate(tomorrow.getDate() + 1);
-    return tomorrow.toISOString().split("T")[0];
-  };
+
 
   if (showThankYou) {
     return (
@@ -150,19 +125,20 @@ const ConsultationForm = () => {
               <div className="success-details">
                 <p>
                   📧 You will receive a confirmation email shortly with your
-                  meeting details.
+                  inquiry details.
                 </p>
-                <p>📅 A calendar invite will be sent to your email address.</p>
                 <p>
-                  🎥 We'll send you the Zoom/Google Meet link before your
-                  scheduled time.
+                  📞 Our team will contact you within 24 hours to schedule your consultation.
+                </p>
+                <p>
+                  🎯 We'll discuss your goals and create a personalized plan for your UK education journey.
                 </p>
               </div>
               <button
                 className="btn btn-primary"
                 onClick={() => setShowThankYou(false)}
               >
-                Book Another Consultation
+                Submit Another Inquiry
               </button>
             </div>
           </div>
@@ -175,7 +151,7 @@ const ConsultationForm = () => {
     <section id="consultation" className="consultation-form">
       <div className="container">
         <div className="section-header">
-                     <h2>Book Your Free Consultation</h2>
+          <h2>Request Your Free Consultation</h2>
           <p>Take the first step toward your UK education journey.</p>
           <div className="underline" />
         </div>
@@ -281,46 +257,7 @@ const ConsultationForm = () => {
                 </span>}
             </div>
 
-            <div className="form-row">
-              <div className="form-group">
-                <label htmlFor="preferredDate">Preferred Date *</label>
-                <input
-                  type="date"
-                  id="preferredDate"
-                  name="preferredDate"
-                  value={formData.preferredDate}
-                  onChange={handleInputChange}
-                  className={errors.preferredDate ? "error" : ""}
-                  min={getTomorrowDate()}
-                />
-                {errors.preferredDate &&
-                  <span className="error-message">
-                    {errors.preferredDate}
-                  </span>}
-              </div>
 
-              <div className="form-group">
-                <label htmlFor="preferredTime">Preferred Time *</label>
-                <select
-                  id="preferredTime"
-                  name="preferredTime"
-                  value={formData.preferredTime}
-                  onChange={handleInputChange}
-                  className={errors.preferredTime ? "error" : ""}
-                >
-                  <option value="">Select time slot</option>
-                  {timeSlots.map((slot, index) =>
-                    <option key={index} value={slot}>
-                      {slot}
-                    </option>
-                  )}
-                </select>
-                {errors.preferredTime &&
-                  <span className="error-message">
-                    {errors.preferredTime}
-                  </span>}
-              </div>
-            </div>
 
             <div className="form-group">
               <label htmlFor="areaOfInterest">Area of Interest *</label>
@@ -361,7 +298,7 @@ const ConsultationForm = () => {
               className="btn btn-primary btn-submit"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "📤 Booking..." : "📞 Book Free Consultation"}
+              {isSubmitting ? "📤 Submitting..." : "📞 Request Free Consultation"}
             </button>
           </form>
         </div>

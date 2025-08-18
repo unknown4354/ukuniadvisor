@@ -13,6 +13,7 @@ import ServicesPage from "./pages/Services";
 import ProcessPage from "./pages/Process";
 import SuccessStories from "./pages/SuccessStories";
 import Contact from "./pages/Contact";
+import Referrals from "./pages/Referrals";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
 
           <Navbar />
 
-          <main>
+          <main id="main-content" role="main">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<AboutPage />} />
@@ -32,6 +33,7 @@ function App() {
               <Route path="/process" element={<ProcessPage />} />
               <Route path="/success-stories" element={<SuccessStories />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/referrals" element={<Referrals />} />
             </Routes>
           </main>
 

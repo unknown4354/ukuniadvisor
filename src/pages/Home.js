@@ -1,6 +1,7 @@
 import React from "react";
 import Hero from "../components/Hero";
 import TrustFactors from "../components/TrustFactors";
+import Testimonials from "../components/Testimonials";
 import ConsultationForm from "../components/ConsultationForm";
 
 const Home = () => {
@@ -29,6 +30,9 @@ const Home = () => {
     <div className="home-page">
       <Hero />
 
+      {/* Success Stories Section - Featured prominently */}
+      <Testimonials />
+
       {/* Brief About Section */}
       <section className="home-about">
         <div className="container">
@@ -36,8 +40,8 @@ const Home = () => {
             <h2>Your Trusted Partner for UK Education</h2>
             <p>
               With over 20 years of experience and British Council
-              certification, we provide completely free, online, expert guidance to
-              students from Asia and Africa who want to study in the United
+              certification, we provide completely free, online, expert guidance
+              to students from Asia and Africa who want to study in the United
               Kingdom—from the comfort of their home, at a time that suits them.
             </p>
             <div className="home-stats">
@@ -89,6 +93,46 @@ const Home = () => {
       </section>
 
       <TrustFactors />
+
+      {/* Success Stories Feature Section */}
+      <section className="home-success-feature">
+        <div className="container">
+          <div className="section-header">
+            <h2>🌟 Join Our Success Stories</h2>
+            <p>
+              Over 500+ students have achieved their UK education dreams with
+              our guidance.
+            </p>
+          </div>
+          <div className="success-highlight-grid">
+            <div className="success-highlight-card">
+              <div className="success-number">500+</div>
+              <div className="success-label">Students Successfully Placed</div>
+              <div className="success-detail">Across 50+ UK Universities</div>
+            </div>
+            <div className="success-highlight-card">
+              <div className="success-number">99%</div>
+              <div className="success-label">Success Rate</div>
+              <div className="success-detail">Above industry average</div>
+            </div>
+            <div className="success-highlight-card">
+              <div className="success-number">£2M+</div>
+              <div className="success-label">Scholarships Secured</div>
+              <div className="success-detail">
+                For our students over 5 years
+              </div>
+            </div>
+          </div>
+          <div className="success-cta-buttons">
+            <a href="/success-stories" className="btn btn-primary">
+              🌟 View All Success Stories
+            </a>
+            <a href="/contact" className="btn btn-secondary">
+              Start Your Success Journey
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="home-cta">

@@ -25,7 +25,8 @@ const TrustFactors = () => {
     {
       icon: "🎯",
       title: "100% Focus on the UK",
-      description: "Online guidance from the comfort of your home, at a time that suits you"
+      description:
+        "Online guidance from the comfort of your home, at a time that suits you"
     },
     {
       icon: "✅",
@@ -38,13 +39,13 @@ const TrustFactors = () => {
     <section className="trust-factors">
       <div className="container">
         <div className="section-header">
-                      <h2>Why Students Trust UkUniAdviser</h2>
+          <h2>Why Students Trust UkUniAdviser</h2>
           <div className="underline" />
         </div>
 
         <div className="trust-hero-image">
           <img
-            src="https://images.unsplash.com/photo-1520975922291-9cd175dc1be7?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.1.0"
+            src="https://images.unsplash.com/photo-1595535373655-4b9c2aae42d1?q=80&w=1238&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Professional Education Consultancy in the UK"
             style={{
               width: "100%",
@@ -77,7 +78,9 @@ const TrustFactors = () => {
           <div className="mission-content">
             <h3>📌 Our Mission</h3>
             <p className="mission-text">
-              Making British Higher Education accessible, affordable, and achievable for every deserving student through free Online, personalized, and Ethical counselling.
+              Making British Higher Education accessible, affordable, and
+              achievable for every deserving student through free Online,
+              personalized, and Ethical counselling.
             </p>
           </div>
         </div>
