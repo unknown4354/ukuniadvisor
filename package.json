@@ -28,6 +28,7 @@
     "dev": "concurrently --names \"API,WEB\" --prefix-colors \"blue,green\" \"npm run server\" \"npm run start\"",
     "heroku-postbuild": "npm run build"
   },
+  "proxy": "http://localhost:5001",
   "eslintConfig": {
     "extends": [
       "react-app",

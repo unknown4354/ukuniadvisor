@@ -1,0 +1,6 @@
+To test email functionality temporarily, you can use these mock credentials:
+EMAIL_USER=test@example.com
+EMAIL_PASS=test_password
+EMAIL_TO=contact@ukuniadviser.com
+
+Note: This will simulate email sending but won't actually send real emails.

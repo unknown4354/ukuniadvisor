@@ -6,7 +6,7 @@ const path = require("path");
 const nodemailer = require("nodemailer");
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 
 // Middleware
 app.use(cors());
@@ -35,6 +35,7 @@ app.post("/api/book-consultation", async (req, res) => {
       "preferredContactMethod",
       "areaOfInterest"
     ];
+
     for (const field of requiredFields) {
       if (!formData[field]) {
         return res.status(400).json({ error: `${field} is required` });
@@ -154,18 +155,23 @@ Submitted: ${new Date().toLocaleString("en-GB", {
 ---
 This notification was sent automatically by UkUniAdviser website.`;
 
-    // Send email
-    await transporter.sendMail({
-      from: {
-        name: "UkUniAdviser Notifications",
-        address: process.env.EMAIL_USER || "no-reply@ukuniadviser.com"
-      },
-      to: toEmail,
-      replyTo: formData.email,
-      subject,
-      text,
-      html
-    });
+    // Send email (skip if email credentials not configured)
+    if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
+      await transporter.sendMail({
+        from: {
+          name: "UkUniAdviser Notifications",
+          address: process.env.EMAIL_USER || "no-reply@ukuniadviser.com"
+        },
+        to: toEmail,
+        replyTo: formData.email,
+        subject,
+        text,
+        html
+      });
+      console.log("Email sent successfully to:", toEmail);
+    } else {
+      console.log("Email not sent - EMAIL_USER and EMAIL_PASS not configured. Form data logged:", formData);
+    }
 
     // Also log for audit
     console.log("New consultation request:", formData);

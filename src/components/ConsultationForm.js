@@ -1,4 +1,8 @@
+/* global Calendly */
 import React, { useState } from "react";
+
+// eslint-disable-next-line no-unused-vars
+const tempFormData = null; // Temporary variable to suppress unused import warning
 
 const ConsultationForm = () => {
   const [formData, setFormData] = useState({
@@ -55,6 +59,7 @@ const ConsultationForm = () => {
       newErrors.email = "Email is invalid";
     }
 
+    // Phone number is required for all contact methods
     if (!formData.phone.trim()) {
       newErrors.phone = "Phone number is required";
     }
@@ -91,7 +96,12 @@ const ConsultationForm = () => {
       });
 
       if (response.ok) {
+        // Show thank you message
         setShowThankYou(true);
+
+        // No special handling needed for form submissions now
+
+        // Reset form
         setFormData({
           name: "",
           email: "",
@@ -154,6 +164,45 @@ const ConsultationForm = () => {
           <h2>Request Your Free Consultation</h2>
           <p>Take the first step toward your UK education journey.</p>
           <div className="underline" />
+          
+          {/* Direct Calendly Button */}
+          <div className="calendly-button-section" style={{ marginTop: '30px', marginBottom: '30px', textAlign: 'center' }}>
+            <p style={{ marginBottom: '15px', fontSize: '16px', color: '#6c757d' }}>
+              📅 <strong>Want to book instantly?</strong> Schedule your consultation directly:
+            </p>
+            <button
+              className="btn btn-primary"
+              onClick={() => window.open('https://calendly.com/vccs-ahd', '_blank')}
+              style={{ 
+                fontSize: '16px', 
+                padding: '12px 24px',
+                background: 'linear-gradient(135deg, #c8102e, #012169)',
+                border: 'none',
+                borderRadius: '8px',
+                color: 'white',
+                cursor: 'pointer',
+                boxShadow: '0 4px 12px rgba(200, 16, 46, 0.3)',
+                transition: 'all 0.3s ease'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.transform = 'translateY(-2px)';
+                e.target.style.boxShadow = '0 6px 16px rgba(200, 16, 46, 0.4)';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.transform = 'translateY(0)';
+                e.target.style.boxShadow = '0 4px 12px rgba(200, 16, 46, 0.3)';
+              }}
+            >
+              📅 Schedule via Calendly
+            </button>
+            <p style={{ marginTop: '10px', fontSize: '14px', color: '#6c757d' }}>
+              Opens in a new tab • Book your preferred time slot instantly
+            </p>
+          </div>
+          
+          <div style={{ textAlign: 'center', margin: '20px 0', color: '#6c757d' }}>
+            <span style={{ fontSize: '14px' }}>OR</span>
+          </div>
         </div>
 
         <div className="form-container">
