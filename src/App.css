@@ -115,83 +115,59 @@
   --gradient-uk-blue: linear-gradient(135deg, var(--uk-blue), var(--uk-blue-light));
 }
 
-/* Dark Theme Variables - Enhanced UK Flag Theme */
+/* Dark Theme Variables - Fixed and Simplified */
 .dark {
-  /* Base colors - Sophisticated dark mode UK Flag inspired */
-  --uk-red: #ff4757; /* Vibrant red with better contrast */
-  --uk-blue: #3742fa; /* Rich blue for dark mode */
-  --uk-blue-light: #5352ed; /* Lighter blue accent for dark mode */
-  --uk-white: #0f0f0f; /* Deep dark background */
-  --uk-off-white: #1a1a1a; /* Slightly lighter dark for variety */
+  /* Base colors - Clean dark mode with proper contrast */
+  --uk-red: #ff4757;
+  --uk-blue: #3742fa;
+  --uk-blue-light: #5352ed;
+  --uk-white: #ffffff; /* Keep white as white for text */
+  --uk-off-white: #f8f9fa; /* Light gray for subtle text */
   
-  /* Primary theme colors - Enhanced dark palette */
-  --primary-color: var(--uk-white); /* Main dark */
-  --secondary-color: var(--uk-red); /* Vibrant red accent */
-  --accent-color: var(--uk-blue); /* Rich blue accent */
-  --accent-light: var(--uk-blue-light); /* Light blue accent */
+  /* Dark backgrounds */
+  --dark-bg-primary: #0f0f0f; /* Main dark background */
+  --dark-bg-secondary: #1a1a1a; /* Secondary dark background */
+  --dark-bg-tertiary: #262626; /* Card backgrounds */
   
-  /* Glass and overlay effects - Enhanced for better depth */
-  --glass-white: rgba(15, 15, 15, 0.35);
-  --glass-red: rgba(255, 71, 87, 0.18);
-  --glass-blue: rgba(55, 66, 250, 0.18);
-  --glass-white-strong: rgba(15, 15, 15, 0.55);
-  --glass-red-strong: rgba(255, 71, 87, 0.35);
-  --glass-blue-strong: rgba(55, 66, 250, 0.35);
-  --glass-border: rgba(255, 255, 255, 0.12);
-  --glass-border-red: rgba(255, 71, 87, 0.35);
-  --glass-border-blue: rgba(55, 66, 250, 0.35);
+  /* Primary theme colors - Fixed for dark mode */
+  --primary-color: var(--dark-bg-primary);
+  --secondary-color: var(--uk-red);
+  --accent-color: var(--uk-blue);
+  --accent-light: var(--uk-blue-light);
   
-  /* Text colors - Enhanced readability */
-  --text-primary: #f8f9fa; /* Softer white for better readability */
-  --text-secondary: #cbd5e1; /* Improved gray for secondary text */
-  --text-light: #94a3b8; /* Better contrast light gray */
-  --text-white: var(--uk-white); /* Dark text on light backgrounds */
-  --text-red: var(--uk-red); /* Vibrant red text for accents */
-  --text-blue: var(--uk-blue); /* Rich blue text */
-  --text-muted: rgba(248, 249, 250, 0.65); /* Better muted text */
+  /* Text colors - Proper contrast for dark mode */
+  --text-primary: #ffffff; /* Pure white for main text */
+  --text-secondary: #e2e8f0; /* Light gray for secondary text */
+  --text-light: #94a3b8; /* Medium gray for subtle text */
+  --text-muted: rgba(255, 255, 255, 0.7); /* Muted white text */
   
-  /* Background colors - Enhanced depth */
-  --bg-primary: var(--uk-white); /* Main dark background */
-  --bg-secondary: var(--uk-off-white); /* Secondary dark background */
-  --bg-tertiary: #262626; /* Tertiary background for cards */
-  --bg-red: var(--uk-red); /* Vibrant red background for accents */
-  --bg-blue: var(--uk-blue); /* Rich blue background for accents */
-  --bg-red-light: rgba(255, 71, 87, 0.12); /* Light red background */
-  --bg-blue-light: rgba(55, 66, 250, 0.12); /* Light blue background */
+  /* Background colors */
+  --bg-primary: var(--dark-bg-primary);
+  --bg-secondary: var(--dark-bg-secondary);
+  --bg-tertiary: var(--dark-bg-tertiary);
+  --bg-red: var(--uk-red);
+  --bg-blue: var(--uk-blue);
+  --bg-red-light: rgba(255, 71, 87, 0.15);
+  --bg-blue-light: rgba(55, 66, 250, 0.15);
 
-  /* Theme support - Enhanced variables */
-  --bg-color: var(--bg-primary);
-  --text-color: var(--text-primary);
-  --card-bg: var(--bg-tertiary);
+  /* Glass effects - Simplified */
+  --glass-white: rgba(255, 255, 255, 0.1);
+  --glass-white-strong: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.2);
   
-  /* Shadows and effects - Enhanced depth and sophistication */
-  --glass-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-  --glass-shadow-strong: 0 15px 50px rgba(0, 0, 0, 0.5);
-  --glass-shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.6);
-  --shadow-red: 0 10px 40px rgba(255, 71, 87, 0.25);
-  --shadow-blue: 0 10px 40px rgba(55, 66, 250, 0.25);
+  /* Shadows */
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  --shadow-red: 0 8px 32px rgba(255, 71, 87, 0.3);
+  --shadow-blue: 0 8px 32px rgba(55, 66, 250, 0.3);
   
-  /* Legacy support - Enhanced for dark theme */
-  --primary-black: #f8f9fa;
-  --secondary-black: #e2e8f0;
-  --accent-black: #cbd5e1;
-  --pure-white: var(--uk-white);
-  --off-white: var(--uk-off-white);
-  --glass-black: var(--glass-blue);
-  --glass-black-strong: var(--glass-blue-strong);
-  --glass-border-dark: var(--glass-border-blue);
-  --border-color: rgba(255, 255, 255, 0.12);
+  /* Borders */
+  --border-color: rgba(255, 255, 255, 0.2);
   
-  /* UK Flag specific gradients for dark mode - Enhanced */
-  --gradient-uk-primary: linear-gradient(135deg, var(--uk-white), var(--uk-off-white));
+  /* Gradients */
+  --gradient-uk-primary: linear-gradient(135deg, var(--dark-bg-primary), var(--dark-bg-secondary));
   --gradient-uk-accent: linear-gradient(135deg, var(--uk-red), var(--uk-blue));
   --gradient-uk-red: linear-gradient(135deg, var(--uk-red), #ff3838);
   --gradient-uk-blue: linear-gradient(135deg, var(--uk-blue), var(--uk-blue-light));
-  
-  /* Enhanced gradients for better visual appeal */
-  --gradient-card: linear-gradient(135deg, var(--bg-tertiary), rgba(38, 38, 38, 0.8));
-  --gradient-hero: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
-  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
 }
 
 /* Reset and Base Styles */
@@ -2713,71 +2689,94 @@ section::before {
   font-weight: 500;
 }
 
-/* Dark Mode Support for Consultation Form */
+/* Dark Mode Support for Consultation Form - Fixed */
 .dark .consultation-types {
-  background: var(--glass-black-strong);
-  border: 1px solid var(--glass-border-dark);
-  backdrop-filter: var(--backdrop-blur);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
 }
 
 .dark .option-item {
   background: var(--glass-white);
-  border: 1px solid var(--glass-border-dark);
+  border: 1px solid var(--border-color);
 }
 
 .dark .option-item:hover {
   background: var(--glass-white-strong);
-  border-color: var(--text-primary);
+  border-color: var(--uk-blue);
+}
+
+.dark .option-item strong,
+.dark .option-item p {
+  color: var(--text-primary);
 }
 
 .dark .booking-form {
-  background: rgba(0, 0, 0, 0.85);
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 
-    0 8px 32px rgba(255, 255, 255, 0.12),
-    inset 0 1px 0 rgba(0, 0, 0, 0.8);
+  background: var(--bg-tertiary);
+  border: 2px solid var(--border-color);
+  box-shadow: var(--glass-shadow);
+}
+
+.dark .booking-form h3 {
+  color: var(--uk-blue);
+}
+
+.dark .form-group label {
+  color: var(--text-primary);
 }
 
 .dark .form-group input,
 .dark .form-group select,
 .dark .form-group textarea {
-  background: rgba(0, 0, 0, 0.8);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
   color: var(--text-primary);
-  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .dark .form-group input::placeholder,
 .dark .form-group textarea::placeholder {
-  color: var(--text-secondary);
+  color: var(--text-light);
 }
 
 .dark .form-group input:focus,
 .dark .form-group select:focus,
 .dark .form-group textarea:focus {
-  border-color: rgba(255, 255, 255, 0.8);
-  background: rgba(0, 0, 0, 0.95);
+  border-color: var(--uk-blue);
+  background: var(--bg-primary);
   box-shadow: 
-    inset 0 2px 4px rgba(255, 255, 255, 0.15),
-    0 0 0 4px rgba(255, 255, 255, 0.1),
-    0 8px 25px rgba(255, 255, 255, 0.15);
+    inset 0 2px 4px rgba(0, 0, 0, 0.4),
+    0 0 0 4px rgba(55, 66, 250, 0.2),
+    var(--shadow-blue);
 }
 
 .dark .form-group input.error,
 .dark .form-group select.error,
 .dark .form-group textarea.error {
-  border-color: rgba(239, 68, 68, 0.8);
-  background: rgba(59, 7, 7, 0.9);
+  border-color: #ef4444;
+  background: rgba(59, 7, 7, 0.5);
   box-shadow: 
-    inset 0 2px 4px rgba(239, 68, 68, 0.1),
-    0 0 0 4px rgba(239, 68, 68, 0.15),
-    0 4px 12px rgba(239, 68, 68, 0.2);
+    inset 0 2px 4px rgba(239, 68, 68, 0.2),
+    0 0 0 4px rgba(239, 68, 68, 0.15);
 }
 
 .dark .thank-you-message {
-  background: var(--glass-black-strong);
-  border: 1px solid var(--glass-border-dark);
-  backdrop-filter: var(--backdrop-blur);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
+}
+
+.dark .thank-you-content h2,
+.dark .thank-you-content p {
+  color: var(--text-primary);
+}
+
+.dark .calendly-button-section p {
+  color: var(--text-secondary);
+}
+
+.dark .calendly-button-section strong {
+  color: var(--text-primary);
 }
 
 .btn-submit {
@@ -5389,9 +5388,10 @@ html {
               box-shadow var(--transition);
 }
 
-/* Dark theme specific adjustments */
+/* Dark theme specific adjustments - Fixed */
 .dark body {
-  background: #000000;
+  background: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 .dark .App {
@@ -5400,40 +5400,46 @@ html {
 
 /* Dark mode page header improvements */
 .dark .page-header {
-  background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
 }
 
 .dark .page-header::before {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .dark .page-header h1,
 .dark .page-header p {
-  color: var(--uk-white);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-}
-
-/* Dark mode number visibility improvements */
-.dark .stat-number {
-  color: var(--uk-white);
+  color: var(--text-primary);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 /* Dark mode text visibility improvements */
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: var(--text-primary);
+}
+
+.dark p, .dark span, .dark div {
+  color: var(--text-primary);
+}
+
+.dark .stat-number {
+  color: var(--uk-red);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
 .dark .about-text h2,
 .dark .about-text p {
-  color: var(--uk-white);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  color: var(--text-primary);
 }
 
 .dark .feature-item h3,
 .dark .feature-item p {
-  color: var(--uk-white);
+  color: var(--text-primary);
 }
 
 .dark .service-card h3,
 .dark .service-card .service-description {
-  color: var(--uk-white);
+  color: var(--text-primary);
 }
 
 /* Improve mobile menu visibility */
@@ -5443,30 +5449,55 @@ html {
 }
 
 .dark .navbar-nav a {
-  color: var(--uk-white) !important;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  color: var(--text-primary) !important;
 }
 
 .dark .home-stats .stat-number {
   color: var(--uk-red);
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .dark .number-card .number {
   color: var(--uk-red);
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .dark .step-number {
   background: var(--uk-red);
-  color: var(--uk-white);
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  color: var(--text-primary);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .dark .expect-item .step {
   background: var(--uk-red);
-  color: var(--uk-white);
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  color: var(--text-primary);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Fix section headers in dark mode */
+.dark .section-header h2 {
+  color: var(--text-primary);
+}
+
+.dark .section-header p {
+  color: var(--text-secondary);
+}
+
+/* Fix button text in dark mode */
+.dark .btn {
+  color: var(--text-primary);
+}
+
+.dark .btn-primary {
+  background: var(--gradient-uk-accent);
+  border-color: var(--uk-blue);
+  color: var(--text-primary);
+}
+
+.dark .btn-secondary {
+  background: var(--bg-tertiary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
 }
 
 /* Ensure smooth theme transitions */
